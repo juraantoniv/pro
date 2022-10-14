@@ -1,0 +1,7 @@
+
+const myAccessToken ='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYTk2N2MzNjM5YTljZjRkODJkNTA1ODk5NjFmZjRkNiIsInN1YiI6IjYzNDk5Y2VjNTAxY2YyMDA3ZjZlYzBmNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KByXdvUya4cK-JwZ-oO1v2qyX970roKdfzMtb2e0WiU'
+
+
+export {
+    myAccessToken
+}
