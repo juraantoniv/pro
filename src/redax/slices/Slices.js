@@ -1,11 +1,12 @@
 import {createAsyncThunk, createSlice, current} from "@reduxjs/toolkit";
-import {carService} from "../../services/car.service";
-import car from "../../components/Car/Car";
+
+import {movieService} from "../../services";
 
 
 const initialState = {
-    cars: [],
-    car: []
+    movies:[],
+    name: [],
+    configuration:[]
 }
 
 
@@ -14,8 +15,52 @@ const getAllMovies = createAsyncThunk(
     async (_, {rejectWithValue}) => {
 
         try {
-            const {data} = await carService.getAll()
-            return data.data
+            const {data} = await movieService.getAll()
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+
+const getName = createAsyncThunk(
+    'carSlice1/getName',
+    async (_, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getAccount()
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+const getConfiguration = createAsyncThunk(
+    'carSlice1/configuration',
+    async (_, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getConfiguration()
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+
+const getMovie = createAsyncThunk(
+    'carSlice1/search',
+    async (name, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getMovie(name)
+            return data
         } catch (e) {
             return rejectWithValue(e.response.data)
 
@@ -28,22 +73,34 @@ const getAllMovies = createAsyncThunk(
 const movieSlice = createSlice({
     name: 'carSlice',
     initialState,
-    reducers: {
-        setCurrentUser: (state, action) => {
-            state.car = action.payload
-        },
-    },
+    reducers: {},
     extraReducers: {
         [getAllMovies.fulfilled]: (state, action) => {
             state.movies = action.payload
+
+        },
+        [getMovie.fulfilled]: (state, action) => {
+            state.movies = action.payload
+
+        },
+        [getName.fulfilled]: (state, action) => {
+            state.name = action.payload
+
+        },
+        [getConfiguration.fulfilled]: (state, action) => {
+            state.configuration= action.payload
+
         },
     },
 });
 
-const {reducer: movieReducer, actions: {}} = movieSlice
+const {reducer: movieReducer} = movieSlice
 
 const getMovies = {
-    getAllMovies
+    getAllMovies,
+    getName,
+    getConfiguration,
+    getMovie
 }
 
 export {

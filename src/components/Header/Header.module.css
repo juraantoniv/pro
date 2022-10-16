@@ -1,0 +1,8 @@
+.Header{
+    display: flex;
+    background: crimson;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,10 @@
+.cars_list{
+    background: coral;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}

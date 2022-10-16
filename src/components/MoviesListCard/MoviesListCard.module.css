@@ -1,0 +1,17 @@
+.card_of_movie{
+    padding-top:0px;
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background: white;
+}
+
+image{
+    height: 65%;
+    width: 100%;
+
+}
