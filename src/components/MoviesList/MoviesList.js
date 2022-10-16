@@ -24,11 +24,15 @@ const MoviesList = () => {
 
    
     return (
+        <div>
+
+            <h3>{movies.page}</h3>
+
         <div className={css.cars_list}>
             {/*{JSON.stringify(movies)}*/}
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-            {movies.page}
 
+        </div>
 
         </div>
     );

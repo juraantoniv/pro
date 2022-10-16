@@ -11,7 +11,7 @@ const Header = (effect, deps) => {
     const [prev, setPrev] = useState(null);
     const [next, setNext] = useState(null);
 
-    const [query1, setQuery1] = useSearchParams({page:'1'});
+    const [queryPage, setQueryPage] = useSearchParams({page:'1'});
 
 
     const dispatch = useDispatch()
@@ -29,12 +29,12 @@ const Header = (effect, deps) => {
 
 
    useEffect(()=>{
-       dispatch(getMovies.getAllMovies(query1.get('page')))
+       dispatch(getMovies.getAllMovies(queryPage.get('page')))
        console.log('did')
        setPrev(prev)
        setNext(next)
        
-   },[dispatch, next, prev,query1])
+   },[dispatch, next, prev,queryPage])
 
 
     useEffect(() => {
@@ -44,10 +44,10 @@ const Header = (effect, deps) => {
 
 
     const prevPage = () => {
-        setQuery1(value=>({page:value.get('page')-1}))
+        setQueryPage(value=>({page:value.get('page')-1}))
     }
     const nextPage = () => {
-        setQuery1(value=>({page:+value.get('page')+1}))
+        setQueryPage(value=>({page:+value.get('page')+1}))
     }
 
 
