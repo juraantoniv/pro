@@ -28,13 +28,13 @@ const Header = (effect, deps) => {
 
 
 
-    useEffect(() => {
-        dispatch(getMovies.getAllMovies('page'))
-        console.log('did')
-        setPrev(prev)
-        setNext(next)
-
-    },[dispatch, next, prev],[query])
+   useEffect(()=>{
+       dispatch(getMovies.getAllMovies(query1.get('page')))
+       console.log('did')
+       setPrev(prev)
+       setNext(next)
+       
+   },[dispatch, next, prev,query1])
 
 
     useEffect(() => {
