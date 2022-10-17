@@ -56,13 +56,13 @@ const Header = () => {
 
 
 
-
     const navigate = useNavigate();
 
     return (
         <div>
             <div className={css.Header}>
                 <div>
+
                     <div>
                         <div>{configuration.images?.base_url}</div>
                         <img src={configuration.images?.base_url} alt='img_at'/>

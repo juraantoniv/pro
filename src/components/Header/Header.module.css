@@ -1,3 +1,13 @@
+:root {
+    --var-bgcolor: #fff;
+    --var-fontcolor: #000;
+}
+
+body {
+    background-color: var(--var-bgcolor);
+    color: var(--var-fontcolor);
+}
+
 .Header{
     display: flex;
     background: crimson;
@@ -6,4 +16,21 @@
     justify-content: center;
     align-items: center;
 
+}
+
+body {
+    color: #222;
+    background: #fff;
+}
+a {
+    color: #0033cc;
+}
+
+/* Стили Тёмной темы */
+body.dark-theme {
+    color: #eee;
+    background: #121212;
+}
+body.dark-theme a {
+    color: #809fff;
 }
