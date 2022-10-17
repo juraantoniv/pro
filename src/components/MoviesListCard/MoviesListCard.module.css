@@ -19,7 +19,7 @@ text{
 
 .card_of_movie_info{
     padding-top:15px;
-    height: 550px;
+    height: 650px;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -82,11 +82,3 @@ image{
     z-index: 10000;
 }
 
-.badge1:hover {
-    transform: scale(1.5);
-    margin-top: -10px;
-    margin-left: 20px;
-    transition: margin-left 130ms;
-    transition: margin-top 130ms;
-    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.4);
-}

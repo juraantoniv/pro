@@ -20,6 +20,10 @@ const {setMovie}=useSelector(state => state.movieReducer)
                 <div>{setMovie?.overview}</div>
                  <h3>{showGenre(setMovie?.genre_ids)}</h3>
                 <div>{setMovie?.release_date}</div>
+                 <hr/>
+                <div>Середня оцінка: {setMovie?.vote_average}</div>
+
+
                  </div>
         </div>
     );
