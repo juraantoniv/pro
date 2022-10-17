@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import {getMovies} from "../../redax";
 import css from "./MoviesListCard.module.css";
 import {Link, useParams} from "react-router-dom";
-import {showGenre} from "../../Functions/Functions";
+import {showAll, showGenre} from "../../Functions/Functions";
 import Rating from "@mui/material/Rating";
 
 
@@ -19,7 +19,7 @@ const {setMovie}=useSelector(state => state.movieReducer)
                  <Link to={'/Picture'}><img src={`http://image.tmdb.org/t/p/w500/${setMovie?.backdrop_path}`} alt='img_at'/></Link>
                 <h3>{setMovie?.original_title}</h3>
                 <div>{setMovie?.overview}</div>
-                 <h3>{showGenre(setMovie?.genre_ids)}</h3>
+                 <h3>{showAll(setMovie?.genre_ids)}</h3>
                 <div>{setMovie?.release_date}</div>
                  <hr/>
                 <div>Середня оцінка: {setMovie?.vote_average}</div>

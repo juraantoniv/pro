@@ -54,6 +54,67 @@ const showGenre = (data) => {
 
 }
 
+
+const showAll = (data) => {
+
+    const empty =[]
+
+    if (data?.indexOf(28,0)!==-1){
+        empty.push('Action')
+    }
+    else if (data?.indexOf(12,0)!==-1){
+        empty.push('Adventure')
+    }
+    else if (data?.indexOf(35,0)!==-1){
+        empty.push('Comedy')
+    }
+    else if (data?.indexOf(80,0)!==-1){
+        empty.push('Crime')
+    }
+    else if (data?.indexOf(18,0)!==-1){
+        empty.push('Drama')
+    }
+    else if (data?.indexOf(14,0)!==-1){
+        empty.push('Fantasy')
+    }
+    else if (data?.indexOf(99,0)!==-1){
+        empty.push('Documentary')
+    }
+    else if (data?.indexOf(10751,0)!==-1){
+        empty.push('Family')
+    }
+    else if (data?.indexOf(36,0)!==-1) {
+        empty.push('History')
+    }
+    else if (data?.indexOf(27,0)!==-1){
+        empty.push('Horror')
+    }
+    else if (data?.indexOf(37,0)!==-1){
+        empty.push('Western')
+    }
+    else if (data?.indexOf(53,0)!==-1){
+        empty.push('Thriller')
+    }
+    else if (data?.indexOf(10770,0)!==-1){
+        empty.push('Tv Movie')
+    }
+    else if (data?.indexOf(9648,0)!==-1){
+        empty.push('Mystery')
+    }
+    else if (data?.indexOf(16,0)!==-1){
+        empty.push('Animation')
+    }
+    else if (data?.indexOf(10752,0)!==-1){
+        empty.push('War')
+    }
+    else if (data?.indexOf(878,0)!==-1){
+        empty.push('Science Fiction')
+    }
+        return empty
+
+}
+
 export {
-    showGenre
+    showGenre,
+    showAll
 }

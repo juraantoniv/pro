@@ -22,7 +22,7 @@ const MoviesList = () => {
 
         <div className={css.cars_list}>
 
-            {errors && <h3>Errors</h3>}
+            {/*{<h3>Errors</h3>}*/}
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
 
         </div>

@@ -8,20 +8,21 @@
     overflow: hidden;
     border-radius: 5px;
     background: white;
-    text-decoration: none;
     padding-bottom: 15px;
-
+    text-decoration: none
 
 }
 
-text{
-    text-decoration: none;
+a{
+    color: #8d8176;
+    text-decoration: none !important;
+    border: none !important;
 }
 
 .card_of_movie_info{
     padding-top:15px;
-    height: 650px;
-    width: 350px;
+    height: 750px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +30,8 @@ text{
     border-radius: 5px;
     background: white;
     text-decoration: none;
+    color: #8d8176;
+    border: none !important;
 
 }
 
