@@ -12,6 +12,7 @@ import {MoviesList} from "./components/MoviesList/MoviesList";
 import Header from "./components/Header/Header";
 import {GetGenre} from "./components/MoviesList/GetGenre";
 import MovieInfo from "./components/MoviesListCard/MovieInfo";
+import Picture from "./components/MoviesListCard/Picture";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path={':Documentary'} element={<MoviesList/>}/>
         </Route>
           <Route path={'/Info'} element={<MovieInfo/>}/>
+          <Route path={'/Picture'} element={<Picture/>}/>
       </Routes>
     </div>
   );
