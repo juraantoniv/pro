@@ -17,6 +17,7 @@ const GetGenre = () => {
     const {movies}=useSelector(state => state.movieReducer)
 
     let {Action}= useParams()
+    console.log(Action)
 
 
     useEffect(() => {

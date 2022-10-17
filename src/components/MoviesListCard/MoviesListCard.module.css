@@ -12,6 +12,10 @@
 
 }
 
+text{
+    text-decoration: none;
+}
+
 .card_of_movie_info{
     padding-top:15px;
     height: 550px;
@@ -35,7 +39,7 @@
 }
 
 image{
-    height: 65%;
+    height: 100%;
     width: 100%;
 
 }

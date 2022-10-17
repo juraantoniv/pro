@@ -8,3 +8,7 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+text{
+    text-decoration: none;
+}
