@@ -4,7 +4,7 @@ import css from "./Header.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
 
-const Header = (effect, deps) => {
+const Header = () => {
 
 
     const [query, setQuery] = useState("")
@@ -12,6 +12,8 @@ const Header = (effect, deps) => {
     const [next, setNext] = useState(null);
 
     const [queryPage, setQueryPage] = useSearchParams({page:'1'});
+
+    let item={id:'28'}
 
 
     const dispatch = useDispatch()
@@ -30,11 +32,11 @@ const Header = (effect, deps) => {
 
    useEffect(()=>{
        dispatch(getMovies.getAllMovies(queryPage.get('page')))
-       console.log('did')
        setPrev(prev)
        setNext(next)
        
    },[dispatch, next, prev,queryPage])
+
 
 
     useEffect(() => {
@@ -49,6 +51,9 @@ const Header = (effect, deps) => {
     const nextPage = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
     }
+
+
+
 
 
 
@@ -78,21 +83,27 @@ const Header = (effect, deps) => {
                            value={query}
                     />
                 </form>
-                <button onClick={() => navigate('/Action')}>Action</button>
-                <button onClick={() => navigate('/Adventure')}>Adventure</button>
-                <button onClick={() => navigate('/Comedy')}>Comedy</button>
-                <button onClick={() => navigate('/Crime')}>Crime</button>
-                <button onClick={() => navigate('/Documentary')}>Documentary</button>
+                {/*<button onClick={() => navigate('/Action')}>Action</button>*/}
+                {/*<button onClick={() => navigate('/Adventure')}>Adventure</button>*/}
+                {/*<button onClick={() => navigate('/Comedy')}>Comedy</button>*/}
+                {/*<button onClick={() => navigate('/Crime')}>Crime</button>*/}
+                {/*<button onClick={() => navigate('/Documentary')}>Documentary</button>*/}
+
+                <button onClick={() => navigate('53')}>Action</button>
+                <button onClick={() => navigate('12')}>Adventure</button>
+                <button onClick={() => navigate('35')}>Comedy</button>
+                <button onClick={() => navigate('80')}>Crime</button>
+                <button onClick={() => navigate('99')}>Documentary</button>
 
             </div>
             </div>
             <div>
                 <div>Welcome {name.username}</div>
-                <img src={name.avatar} alt='img_at'/>
+                {/*<img src={name.avatar} alt='img_at'/>*/}
             </div>
 
             </div>
-            <button  onClick={prevPage}>prevPage</button>
+            <button  disabled={prev===1} onClick={prevPage}>prevPage</button>
             <button onClick={nextPage}>nextPage</button>
         </div>
     );

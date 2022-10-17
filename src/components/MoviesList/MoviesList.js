@@ -1,13 +1,13 @@
-import React, { useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React, {useEffect} from 'react';
+import {useSelector} from "react-redux";
 import css from './MoviesList.module.css'
 
 
 
-// import {useForm} from "react-hook-form";
+import {useDispatch} from "react-redux";
 import {getMovies} from "../../redax";
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 
 
 const MoviesList = () => {
@@ -17,12 +17,10 @@ const MoviesList = () => {
     const {movies}=useSelector(state => state.movieReducer)
 
 
-   const value = useParams()
-
-    console.log(value)
 
 
-   
+
+
     return (
         <div>
 
@@ -30,8 +28,9 @@ const MoviesList = () => {
 
         <div className={css.cars_list}>
             {/*{JSON.stringify(movies)}*/}
+            {/*{movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}*/}
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-
+            {/*{movies.results?.filter(({genre_ids}) => genre_ids.toString().includes('16')).map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}*/}
         </div>
 
         </div>

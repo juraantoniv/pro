@@ -6,7 +6,8 @@ const urls = {
     movies: '/discover/movie',
     account:'/account',
     configuration:'/configuration',
-    search:'/search'
+    search:'/search',
+    with_genres:'/with_genres'
 
 }
 

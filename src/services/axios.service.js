@@ -10,7 +10,6 @@ axiosService.interceptors.request.use((config)=>{
     const access = myAccessToken
 
     if (access){
-        console.log(access)
         config.headers.Authorization = ` Bearer ${access}`
     }
     return config

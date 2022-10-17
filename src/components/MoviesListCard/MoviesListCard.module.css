@@ -1,13 +1,29 @@
 .card_of_movie{
     padding-top:0px;
-    height: 350px;
-    width: 200px;
+    height: 450px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
     border-radius: 5px;
     background: white;
+    text-decoration: none;
+
+}
+
+.card_of_movie_info{
+    padding-top:15px;
+    height: 550px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background: white;
+    text-decoration: none;
+
 }
 
 image{

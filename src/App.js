@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import HeaderMoviePAge from "./MoviesPage/HeaderMoviePAge";
 import {MoviesList} from "./components/MoviesList/MoviesList";
+import Header from "./components/Header/Header";
+import {GetGenre} from "./components/MoviesList/GetGenre";
+import MovieInfo from "./components/MoviesListCard/MovieInfo";
 
 function App() {
   return (
@@ -18,11 +21,12 @@ function App() {
         <Route element={<HeaderMoviePAge/>}>
           <Route index element={<Navigate to={'/Movies'}/>}/>
           <Route path={'Movies'} element={<MoviesList/>}/>
-          <Route path={':Adventure'} element={<MoviesList/>}/>
+          <Route path={':Action'} element={<GetGenre/>}/>
           <Route path={':Comedy'} element={<MoviesList/>}/>
           <Route path={':Crime'} element={<MoviesList/>}/>
           <Route path={':Documentary'} element={<MoviesList/>}/>
         </Route>
+          <Route path={'/Info'} element={<MovieInfo/>}/>
       </Routes>
     </div>
   );
