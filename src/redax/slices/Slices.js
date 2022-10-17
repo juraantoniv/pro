@@ -7,7 +7,8 @@ const initialState = {
     movies:[],
     name: [],
     configuration:[],
-    setMovie:null
+    setMovie:null,
+    errors:null,
 }
 
 
@@ -98,8 +99,18 @@ const movieSlice = createSlice({
             state.movies = action.payload
 
         },
+        [getAllMovies.rejected]: (state, action) => {
+            state.errors = action.payload
+            console.log(state.errors)
+
+        },
         [getMovie.fulfilled]: (state, action) => {
             state.movies = action.payload
+
+        },
+        [getMovie.rejected]: (state, action) => {
+            state.errors = action.payload
+            console.log(state.errors)
 
         },
         [getName.fulfilled]: (state, action) => {

@@ -17,11 +17,11 @@ const GetGenre = () => {
     const {movies}=useSelector(state => state.movieReducer)
 
     let {Action}= useParams()
-    console.log(Action)
+
 
 
     useEffect(() => {
-        console.log('did')
+
         dispatch(getMovies.getGenres(Action))
     },[dispatch,Action])
 

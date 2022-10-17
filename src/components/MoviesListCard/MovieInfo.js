@@ -4,6 +4,7 @@ import {getMovies} from "../../redax";
 import css from "./MoviesListCard.module.css";
 import {Link, useParams} from "react-router-dom";
 import {showGenre} from "../../Functions/Functions";
+import Rating from "@mui/material/Rating";
 
 
 const MovieInfo = () => {
@@ -22,6 +23,7 @@ const {setMovie}=useSelector(state => state.movieReducer)
                 <div>{setMovie?.release_date}</div>
                  <hr/>
                 <div>Середня оцінка: {setMovie?.vote_average}</div>
+                 <Rating name="half-rating" defaultValue={+setMovie?.vote_average} precision={0.5} max={10} />
 
 
                  </div>
