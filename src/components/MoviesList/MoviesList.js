@@ -1,23 +1,19 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useSelector} from "react-redux";
 import css from './MoviesList.module.css'
 
 
 
-import {useDispatch} from "react-redux";
-import {getMovies} from "../../redax";
+
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import {useLocation, useParams} from "react-router-dom";
+
 
 
 const MoviesList = () => {
 
-    // const dispatch = useDispatch()
+
 
     const {movies}=useSelector(state => state.movieReducer)
-
-
-
 
 
 
