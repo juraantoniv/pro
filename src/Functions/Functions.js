@@ -45,6 +45,9 @@ const showGenre = (data) => {
     else if (data?.indexOf(16,0)!==-1){
         return "Animation"
     }
+    else {
+        return 'Drama'
+    }
 }
 
 export {

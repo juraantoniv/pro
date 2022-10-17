@@ -27,10 +27,9 @@ const MoviesList = () => {
             <h3>{movies.page}</h3>
 
         <div className={css.cars_list}>
-            {/*{JSON.stringify(movies)}*/}
-            {/*{movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}*/}
+
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-            {/*{movies.results?.filter(({genre_ids}) => genre_ids.toString().includes('16')).map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}*/}
+
         </div>
 
         </div>
