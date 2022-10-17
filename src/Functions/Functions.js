@@ -45,9 +45,13 @@ const showGenre = (data) => {
     else if (data?.indexOf(16,0)!==-1){
         return "Animation"
     }
-    else {
-        return 'Drama'
+    else if (data?.indexOf(10752,0)!==-1){
+        return "War"
     }
+    else if (data?.indexOf(878,0)!==-1){
+        return "Science Fiction"
+    }
+
 }
 
 export {
