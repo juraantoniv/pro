@@ -12,7 +12,7 @@ import MoviesListCard from "../MoviesListCard/MoviesListCard";
 const MoviesList = () => {
 
     const {movies,errors}=useSelector(state => state.movieReducer)
-    console.log(errors);
+
 
     return (
         <div>
@@ -21,6 +21,7 @@ const MoviesList = () => {
 
 
         <div className={css.cars_list}>
+
 
             {/*{<h3>Errors</h3>}*/}
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}

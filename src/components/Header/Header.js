@@ -13,7 +13,7 @@ const Header = () => {
 
     const [queryPage, setQueryPage] = useSearchParams({page:'1'});
 
-    let item={id:'28'}
+
 
 
     const dispatch = useDispatch()
@@ -47,12 +47,12 @@ const Header = () => {
 
     const prevPage = () => {
         setQueryPage(value=>({page:value.get('page')-1}))
+        console.log(setQueryPage.value)
+
     }
     const nextPage = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
     }
-
-
 
 
 
@@ -89,24 +89,27 @@ const Header = () => {
                 {/*<button onClick={() => navigate('/Crime')}>Crime</button>*/}
                 {/*<button onClick={() => navigate('/Documentary')}>Documentary</button>*/}
 
-                <button onClick={() => navigate('53')}>Action</button>
-                <button onClick={() => navigate('12')}>Adventure</button>
-                <button onClick={() => navigate('35')}>Comedy</button>
-                <button onClick={() => navigate('80')}>Crime</button>
-                <button onClick={() => navigate('99')}>Documentary</button>
+                <button onClick={() => navigate('53')} className={css.btn}>Action</button>
+                <button onClick={() => navigate('12')} className={css.btn}>Adventure</button>
+                <button onClick={() => navigate('35')} className={css.btn}>Comedy</button>
+                <button onClick={() => navigate('80')} className={css.btn}>Crime</button>
+                <button onClick={() => navigate('99')} className={css.btn}>Documentary</button>
 
             </div>
             </div>
             <div>
-                <div>Welcome {name.username}</div>
+                <h3>Welcome : {name.username}</h3>
                 {/*<img src={name.avatar} alt='img_at'/>*/}
             </div>
 
             </div>
-            <button  disabled={prev===1} onClick={prevPage}>prevPage</button>
+            <button onClick={prevPage}>prevPage</button>
             <button onClick={nextPage}>nextPage</button>
         </div>
     );
 };
 
-export default Header;
+export {
+    Header
+
+}

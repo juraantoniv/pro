@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import HeaderMoviePAge from "./MoviesPage/HeaderMoviePAge";
 import {MoviesList} from "./components/MoviesList/MoviesList";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import {GetGenre} from "./components/MoviesList/GetGenre";
 import MovieInfo from "./components/MoviesListCard/MovieInfo";
 import Picture from "./components/MoviesListCard/Picture";

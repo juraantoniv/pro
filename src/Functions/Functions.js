@@ -55,63 +55,105 @@ const showGenre = (data) => {
 }
 
 
-const showAll = (data) => {
 
-    const empty =[]
+let genress= [
+    {
+        "id": 28,
+        "name": "Action"
+    },
+    {
+        "id": 12,
+        "name": "Adventure"
+    },
+    {
+        "id": 16,
+        "name": "Animation"
+    },
+    {
+        "id": 35,
+        "name": "Comedy"
+    },
+    {
+        "id": 80,
+        "name": "Crime"
+    },
+    {
+        "id": 99,
+        "name": "Documentary"
+    },
+    {
+        "id": 18,
+        "name": "Drama"
+    },
+    {
+        "id": 10751,
+        "name": "Family"
+    },
+    {
+        "id": 14,
+        "name": "Fantasy"
+    },
+    {
+        "id": 36,
+        "name": "History"
+    },
+    {
+        "id": 27,
+        "name": "Horror"
+    },
+    {
+        "id": 10402,
+        "name": "Music"
+    },
+    {
+        "id": 9648,
+        "name": "Mystery"
+    },
+    {
+        "id": 10749,
+        "name": "Romance"
+    },
+    {
+        "id": 878,
+        "name": "Science Fiction"
+    },
+    {
+        "id": 10770,
+        "name": "TV Movie"
+    },
+    {
+        "id": 53,
+        "name": "Thriller"
+    },
+    {
+        "id": 10752,
+        "name": "War"
+    },
+    {
+        "id": 37,
+        "name": "Western"
+    }
+]
 
-    if (data?.indexOf(28,0)!==-1){
-        empty.push('Action')
-    }
-    else if (data?.indexOf(12,0)!==-1){
-        empty.push('Adventure')
-    }
-    else if (data?.indexOf(35,0)!==-1){
-        empty.push('Comedy')
-    }
-    else if (data?.indexOf(80,0)!==-1){
-        empty.push('Crime')
-    }
-    else if (data?.indexOf(18,0)!==-1){
-        empty.push('Drama')
-    }
-    else if (data?.indexOf(14,0)!==-1){
-        empty.push('Fantasy')
-    }
-    else if (data?.indexOf(99,0)!==-1){
-        empty.push('Documentary')
-    }
-    else if (data?.indexOf(10751,0)!==-1){
-        empty.push('Family')
-    }
-    else if (data?.indexOf(36,0)!==-1) {
-        empty.push('History')
-    }
-    else if (data?.indexOf(27,0)!==-1){
-        empty.push('Horror')
-    }
-    else if (data?.indexOf(37,0)!==-1){
-        empty.push('Western')
-    }
-    else if (data?.indexOf(53,0)!==-1){
-        empty.push('Thriller')
-    }
-    else if (data?.indexOf(10770,0)!==-1){
-        empty.push('Tv Movie')
-    }
-    else if (data?.indexOf(9648,0)!==-1){
-        empty.push('Mystery')
-    }
-    else if (data?.indexOf(16,0)!==-1){
-        empty.push('Animation')
-    }
-    else if (data?.indexOf(10752,0)!==-1){
-        empty.push('War')
-    }
-    else if (data?.indexOf(878,0)!==-1){
-        empty.push('Science Fiction')
-    }
-        return empty
 
+// функція пошуку жанрів по id жару
+
+const showAll=(data)=>{
+    let empty = []
+    for (let i = 0; i < data.length; i++) {
+        const genre = data[i];
+        for (let j = 0; j < genress.length; j++) {
+            const genreElement = genress[j];
+            if (genre===genreElement.id){
+                empty.push(genreElement.name)
+                empty.push(' ')
+            }
+
+        }
+
+    }
+
+    return empty
 }
 
 export {

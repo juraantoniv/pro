@@ -6,6 +6,7 @@ import {movieService} from "../../services";
 const initialState = {
     movies:[],
     name: [],
+    top:[],
     configuration:[],
     setMovie:null,
     errors:null,
@@ -13,7 +14,7 @@ const initialState = {
 
 
 const getAllMovies = createAsyncThunk(
-    'carSlice1/getAll1',
+    'movieSlice/getAll',
     async (page, {rejectWithValue}) => {
 
         try {
@@ -25,8 +26,22 @@ const getAllMovies = createAsyncThunk(
     }
 )
 
+const getTop = createAsyncThunk(
+    'movieSlice/getTop',
+    async (_, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getTopRated()
+            console.log(data)
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+        }
+    }
+)
+
 const getName = createAsyncThunk(
-    'carSlice1/getName',
+    'movieSlice/getName',
     async (_, {rejectWithValue}) => {
 
         try {
@@ -40,7 +55,7 @@ const getName = createAsyncThunk(
     }
 )
 const getConfiguration = createAsyncThunk(
-    'carSlice1/configuration',
+    'movieSlice/configuration',
     async (_, {rejectWithValue}) => {
 
         try {
@@ -55,7 +70,7 @@ const getConfiguration = createAsyncThunk(
 )
 
 const getMovie = createAsyncThunk(
-    'carSlice1/search',
+    'movieSlice/search',
     async (name, {rejectWithValue}) => {
 
         try {
@@ -71,7 +86,7 @@ const getMovie = createAsyncThunk(
 
 
 const getGenres = createAsyncThunk(
-    'carSlice1/genres',
+    'movieSlice/genres',
     async (name, {rejectWithValue}) => {
 
         try {
@@ -86,7 +101,7 @@ const getGenres = createAsyncThunk(
 )
 
 const movieSlice = createSlice({
-    name: 'carSlice',
+    name: 'movieSlice',
     initialState,
     reducers: {
         setCurrentFilm: (state, action) => {
@@ -99,6 +114,9 @@ const movieSlice = createSlice({
             state.movies = action.payload
 
         },
+            [getTop.fulfilled]: (state, action) => {
+                state.top = action.payload
+            },
         [getAllMovies.rejected]: (state, action) => {
             state.errors = action.payload
             console.log(state.errors)
@@ -136,7 +154,8 @@ const getMovies = {
     getConfiguration,
     getMovie,
     getGenres,
-    setCurrentFilm
+    setCurrentFilm,
+    getTop
 }
 
 export {

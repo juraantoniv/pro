@@ -7,7 +7,8 @@ const urls = {
     account:'/account',
     configuration:'/configuration',
     search:'/search',
-    with_genres:'/with_genres'
+    with_genres:'/with_genres',
+    top_rated:'/movie/top_rated'
 
 }
 
