@@ -13,7 +13,7 @@ const Header = () => {
 
     const [queryPage, setQueryPage] = useSearchParams({page:'1'});
 
-
+        console.log(query)
 
 
     const dispatch = useDispatch()
@@ -47,7 +47,6 @@ const Header = () => {
 
     const prevPage = () => {
         setQueryPage(value=>({page:value.get('page')-1}))
-        console.log(setQueryPage.value)
 
     }
     const nextPage = () => {
@@ -62,7 +61,6 @@ const Header = () => {
         <div>
             <div className={css.Header}>
                 <div>
-
                     <div>
                         <div>{configuration.images?.base_url}</div>
                         <img src={configuration.images?.base_url} alt='img_at'/>
@@ -83,12 +81,6 @@ const Header = () => {
                            value={query}
                     />
                 </form>
-                {/*<button onClick={() => navigate('/Action')}>Action</button>*/}
-                {/*<button onClick={() => navigate('/Adventure')}>Adventure</button>*/}
-                {/*<button onClick={() => navigate('/Comedy')}>Comedy</button>*/}
-                {/*<button onClick={() => navigate('/Crime')}>Crime</button>*/}
-                {/*<button onClick={() => navigate('/Documentary')}>Documentary</button>*/}
-
                 <button onClick={() => navigate('53')} className={css.btn}>Action</button>
                 <button onClick={() => navigate('12')} className={css.btn}>Adventure</button>
                 <button onClick={() => navigate('35')} className={css.btn}>Comedy</button>

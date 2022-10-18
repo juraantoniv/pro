@@ -5,7 +5,7 @@ import css from "./MoviesListCard.module.css";
 import {Link, useParams} from "react-router-dom";
 import {showAll, showGenre} from "../../Functions/Functions";
 import Rating from "@mui/material/Rating";
-import {Outlet} from "@mui/icons-material";
+
 import MoviesListCard from "./MoviesListCard";
 
 
@@ -18,12 +18,12 @@ const {setMovie,top}=useSelector(state => state.movieReducer)
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getMovies.getTop)
+        dispatch(getMovies.getTop())
     },[dispatch,setMovie])
 
 
     return (
-        <div>
+        <div className={css.new}>
              <div className={css.card_of_movie_info}>
                  <Link to={'/Picture'}><img src={`http://image.tmdb.org/t/p/w500/${setMovie?.backdrop_path}`} alt='img_at'/></Link>
                 <h3>{setMovie?.original_title}</h3>
@@ -33,8 +33,19 @@ const {setMovie,top}=useSelector(state => state.movieReducer)
                  <hr/>
                 <div>Середня оцінка: {setMovie?.vote_average}</div>
                  <Rating name="half-rating" defaultValue={+setMovie?.vote_average} precision={0.5} max={10} />
+
                  </div>
-            {JSON.stringify(top)}
+                    <div className={css.flex}>
+                        <h1>Top rated</h1>
+                        <div className={css.cars_list}>
+                            {top.results?.map(movie =>
+                                <MoviesListCard key={movie.id} movie={movie}/>)}
+                        </div>
+
+
+                    </div>
+
+
         </div>
     );
 }
