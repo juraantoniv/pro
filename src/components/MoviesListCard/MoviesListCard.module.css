@@ -89,7 +89,7 @@ image{
     right: -5px; top: -5px;
     z-index: 1;
     overflow: hidden;
-    width: 75px; height: 75px;
+    width: 95px; height: 95px;
     text-align: right;
 }
 .ribbon span {
