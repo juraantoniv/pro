@@ -1,14 +1,17 @@
 .cars_list{
     background:darkblue;
-    width: 100%;
+    width: 97%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
     flex-wrap: wrap;
     gap: 35px;
+    border-radius: 10px;
 }
 
 text{
     text-decoration: none;
 }
+
+

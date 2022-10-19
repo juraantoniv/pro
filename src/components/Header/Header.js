@@ -74,7 +74,7 @@ const Header = () => {
             <div className={css.Header}>
                 <div>
                     <div>
-                       <img src={'src/components/Header/Img/Знімок екрана 2022-10-19 143920.jpg'} alt={'img'}/>
+                       {/*<img src={'src/components/Header/Img/Знімок екрана 2022-10-19 143920.jpg'} alt={'img'}/>*/}
                     </div>
                     <div></div>
                     <div></div>
@@ -83,10 +83,10 @@ const Header = () => {
                 <div>
 
             <div>
-                <form className={css.form}>
+                <form className={css.search}>
                     <input type="text"
                            placeholder={"Search Movie"}
-                           className={"input"}
+                           className={css.searchTerm}
                            onChange={event => setQuery(event.target.value)}
                            value={query}
                     />
@@ -114,16 +114,15 @@ const Header = () => {
                     {/*    />*/}
                     {/*</Navbar>*/}
 
-                    <button style={{background:'black'}}>Theme</button>
+                    {/*<button style={{background:'black'}}>Theme</button>*/}
             </div>
-            <div>
+            <div className={css.name}>
                 <h3>Welcome : {name.username}</h3>
-                {/*<img src={name.avatar} alt='img_at'/>*/}
             </div>
 
             </div>
-            <button disabled={+page===1} onClick={prevPage}>prevPage</button>
-            <button disabled={+page===500} onClick={nextPage}>nextPage</button>
+            <button className={css.btn1} disabled={+page===1} onClick={prevPage}>prevPage</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage}>nextPage</button>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import css from './MoviesList.module.css'
+import css1 from '../MoviesListCard/MoviesListCard.module.css'
 
 
 
@@ -17,7 +18,7 @@ const MoviesList = () => {
     return (
         <div>
 
-            <h3>{page}</h3>
+            <h3 className={css1.page}>Page: {page}</h3>
 
 
         <div className={css.cars_list}>
