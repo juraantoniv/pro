@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
 import {Navbar} from "react-bootstrap";
 import {Switch} from "./Switch";
+import async from "async";
 
 const Header = () => {
 
@@ -46,6 +47,7 @@ const Header = () => {
     useEffect(() => {
         dispatch(getMovies.getMovie(query))
     },[dispatch, query])
+
 
 
 

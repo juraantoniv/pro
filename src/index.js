@@ -14,11 +14,16 @@ root.render(
     <Provider store={store}>
 
         <BrowserRouter>
-            <StyledEngineProvider injectFirst>
+
             <App/>
-            </StyledEngineProvider>
+
 
         </BrowserRouter>
     </Provider>
 
 );
+
+
+
+
+
