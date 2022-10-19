@@ -11,7 +11,6 @@ import MoviesListCard from "./MoviesListCard";
 
 const MovieInfo = () => {
 
-
 const {setMovie,top,details}=useSelector(state => state.movieReducer)
 
         let {id}=setMovie
@@ -35,11 +34,11 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
                   <Link to={'/Picture'}><img src={`http://image.tmdb.org/t/p/w500/${setMovie?.backdrop_path}`} alt='img_at'/></Link>
                 <h3>{setMovie?.original_title}</h3>
                 <div>{setMovie?.overview}</div>
-                 {/*<h3>{showAll(setMovie?.genre_ids)}</h3>*/}
+                 <h3>{showAll(setMovie?.genre_ids)}</h3>
                 <div>{setMovie?.release_date}</div>
                  <hr/>
-                <div>Середня оцінка: {setMovie?.vote_average}</div>
-                 <Rating name="half-rating" defaultValue={+setMovie?.vote_average} precision={0.5} max={10} />
+                <div>Vote average: {setMovie?.vote_average}</div>
+                 {/*<Rating name="half-rating" defaultValue={setMovie ? +setMovie?.vote_average:+top?.vote_average} precision={0.5} max={10} />*/}
 
                  <div className={css.info}>
 
@@ -61,7 +60,7 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
                         </div>
 
 
-                    </div>}
+                    </div>
 
 
         </div>

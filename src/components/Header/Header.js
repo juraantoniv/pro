@@ -12,12 +12,12 @@ const Header = () => {
     const [query, setQuery] = useState("")
     const [prev, setPrev] = useState(1);
     const [next, setNext] = useState(1);
-    const [value, setValue] = useState(false)
-    const [darkTheme, setDarkTheme] = useState(false)
+    // const [value, setValue] = useState(false)
+    // const [darkTheme, setDarkTheme] = useState(false)
 
-    const [queryPage, setQueryPage] = useSearchParams({page:'1'});
+    let [queryPage, setQueryPage,page] = useSearchParams({page:'1'});
 
-        console.log(query)
+
 
 
     const dispatch = useDispatch()
@@ -33,10 +33,11 @@ const Header = () => {
     },[])
 
 
+    page = queryPage.get('page');
 
-   useEffect(()=>{
+
+    useEffect(()=>{
        dispatch(getMovies.getAllMovies(queryPage.get('page')))
-       setNext(next)
        
    },[dispatch, next, prev,queryPage])
 
@@ -53,14 +54,13 @@ const Header = () => {
         setPrev(prev-1)
         setNext(next-1)
 
-        console.log(prev)
 
     }
     const nextPage = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
         setNext(next+1)
         setPrev(prev+1)
-        console.log(next)
+
     }
 
 
@@ -72,9 +72,7 @@ const Header = () => {
             <div className={css.Header}>
                 <div>
                     <div>
-                        <div>{configuration.images?.base_url}</div>
-                        <img src={configuration.images?.base_url} alt='img_at'/>
-                        <img src={`http://image.tmdb.org/t/p/w500/${configuration.base_url}`} alt='img_at'/>
+                       <img src={'src/components/Header/Img/Знімок екрана 2022-10-19 143920.jpg'} alt={'img'}/>
                     </div>
                     <div></div>
                     <div></div>
@@ -83,7 +81,7 @@ const Header = () => {
                 <div>
 
             <div>
-                <form>
+                <form className={css.form}>
                     <input type="text"
                            placeholder={"Search Movie"}
                            className={"input"}
@@ -113,6 +111,8 @@ const Header = () => {
                     {/*        }}*/}
                     {/*    />*/}
                     {/*</Navbar>*/}
+
+                    <button style={{background:'black'}}>Theme</button>
             </div>
             <div>
                 <h3>Welcome : {name.username}</h3>
@@ -120,8 +120,8 @@ const Header = () => {
             </div>
 
             </div>
-            <button disabled={!prev} onClick={prevPage}>prevPage</button>
-            <button onClick={nextPage}>nextPage</button>
+            <button disabled={+page===1} onClick={prevPage}>prevPage</button>
+            <button disabled={+page===500} onClick={nextPage}>nextPage</button>
         </div>
     );
 };

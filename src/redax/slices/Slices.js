@@ -10,7 +10,8 @@ const initialState = {
     configuration:[],
     setMovie:[],
     errors:null,
-    details:[]
+    details:[],
+    page:null
 }
 
 

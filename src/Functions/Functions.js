@@ -84,21 +84,28 @@ let genress= [
 
 const showAll=(data)=>{
     let empty = []
-    for (let i = 0; i < data.length; i++) {
-        const genre = data[i];
-        for (let j = 0; j < genress.length; j++) {
-            const genreElement = genress[j];
-            if (genre===genreElement.id){
-                empty.push(genreElement.name)
-                empty.push(' ')
+    if (data){
+        for (let i = 0; i < data.length; i++) {
+            const genre = data[i];
+            for (let j = 0; j < genress.length; j++) {
+                const genreElement = genress[j];
+                if (genre===genreElement.id){
+                    empty.push(genreElement.name)
+                    empty.push(' ')
+                }
+
             }
 
         }
 
     }
-
+    else {
+        return empty
+    }
     return empty
+
 }
+
 
 export {
     showAll

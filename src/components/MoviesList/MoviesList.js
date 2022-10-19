@@ -11,13 +11,13 @@ import MoviesListCard from "../MoviesListCard/MoviesListCard";
 
 const MoviesList = () => {
 
-    const {movies,errors}=useSelector(state => state.movieReducer)
+    const {movies,errors,page}=useSelector(state => state.movieReducer)
 
 
     return (
         <div>
 
-            <h3>{movies.page}</h3>
+            <h3>{page}</h3>
 
 
         <div className={css.cars_list}>
