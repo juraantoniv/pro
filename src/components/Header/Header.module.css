@@ -27,7 +27,7 @@ a {
 }
 
 /* Стили Тёмной темы */
-body.dark-theme {
+body.darktheme {
     color: #eee;
     background: #121212;
 }

@@ -3,6 +3,8 @@ import {useNavigate, useSearchParams} from "react-router-dom";
 import css from "./Header.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
+import {Navbar} from "react-bootstrap";
+import {Switch} from "./Switch";
 
 const Header = () => {
 
@@ -10,6 +12,8 @@ const Header = () => {
     const [query, setQuery] = useState("")
     const [prev, setPrev] = useState(null);
     const [next, setNext] = useState(null);
+    const [value, setValue] = useState(false)
+    const [darkTheme, setDarkTheme] = useState(false)
 
     const [queryPage, setQueryPage] = useSearchParams({page:'1'});
 
@@ -88,6 +92,21 @@ const Header = () => {
                 <button onClick={() => navigate('99')} className={css.btn}>Documentary</button>
 
             </div>
+                    {/*<Navbar*/}
+                    {/*    bg="light"*/}
+                    {/*    variant="light"*/}
+                    {/*    expand="lg"*/}
+                    {/*    collapseOnSelect*/}
+                    {/*    className={darkTheme ? "dark-theme" : "light-theme"}*/}
+                    {/*>*/}
+                    {/*    <Switch*/}
+                    {/*        isOn={value}*/}
+                    {/*        onChange={() => {*/}
+                    {/*            setDarkTheme((prevTheme) => !prevTheme);*/}
+                    {/*            setValue(!value);*/}
+                    {/*        }}*/}
+                    {/*    />*/}
+                    {/*</Navbar>*/}
             </div>
             <div>
                 <h3>Welcome : {name.username}</h3>

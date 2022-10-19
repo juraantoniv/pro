@@ -8,7 +8,8 @@ const movieService = {
     getConfiguration: () => axiosService.get(urls.configuration),
     getMovie: (name) => axiosService.get(`${urls.search}/movie?query=${name}`),
     getGenres: (name,page =1) => axiosService.get(`${urls.movies}?with_genres=${name}`,{params:{page}}),
-    getTopRated:() => axiosService.get(urls.top_rated)
+    getTopRated:() => axiosService.get(urls.top_rated),
+    getDetails:(id) => axiosService.get(`${urls.get_details}/${id}`)
 }
 
 export {

@@ -8,8 +8,9 @@ const initialState = {
     name: [],
     top:[],
     configuration:[],
-    setMovie:null,
+    setMovie:[],
     errors:null,
+    details:[]
 }
 
 
@@ -32,7 +33,6 @@ const getTop = createAsyncThunk(
 
         try {
             const {data} = await movieService.getTopRated()
-            console.log(data)
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -83,6 +83,22 @@ const getMovie = createAsyncThunk(
 
     }
 )
+const getMovie_byiD= createAsyncThunk(
+    'movieSlice/byId',
+    async (id, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getDetails(id)
+
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+
 
 
 const getGenres = createAsyncThunk(
@@ -106,7 +122,6 @@ const movieSlice = createSlice({
     reducers: {
         setCurrentFilm: (state, action) => {
             state.setMovie = action.payload
-            console.log(state.setMovie)
         },
     },
     extraReducers: {
@@ -114,9 +129,12 @@ const movieSlice = createSlice({
             state.movies = action.payload
 
         },
-            [getTop.fulfilled]: (state, action) => {
+        [getTop.fulfilled]: (state, action) => {
                 state.top = action.payload
             },
+        [getMovie_byiD.fulfilled]: (state, action) => {
+            state.details = action.payload
+        },
         [getAllMovies.rejected]: (state, action) => {
             state.errors = action.payload
             console.log(state.errors)
@@ -155,7 +173,8 @@ const getMovies = {
     getMovie,
     getGenres,
     setCurrentFilm,
-    getTop
+    getTop,
+    getMovie_byiD
 }
 
 export {
