@@ -31,10 +31,11 @@ a{
     justify-content: center;
     overflow: hidden;
     border-radius: 5px;
-    background: white;
     text-decoration: none;
     color: #8d8176;
     border: none !important;
+    background: darkblue;
+   padding-left: 10px;
 
 }
 
@@ -126,6 +127,7 @@ image{
     padding: 30px;
     flex-wrap: wrap;
     gap: 35px;
+    border-radius: 10px;
 }
 
 .flex{

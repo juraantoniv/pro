@@ -21,7 +21,7 @@ body {
 
 body {
     color: #222;
-    background: #fff;
+    background:midnightblue;
 }
 a {
     color: #0033cc;
@@ -50,7 +50,7 @@ body.dark-theme a {
     font-weight: 500;
     text-decoration: none;
     color: #fff;
-    background-color: #3775dd;
+    background: #0033cc;
     box-shadow: 0 2px #21487f;
     cursor: pointer;
     user-select: none;
@@ -99,11 +99,15 @@ body.dark-theme a {
     height: 36px;
     border: 1px solid #00B4CC;
     background: #00B4CC;
+    color: #002fed;
     text-align: center;
-    color: #fff;
+
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
+}
+::placeholder{
+    color: #002fed;
 }
 
 .name{
@@ -114,20 +118,22 @@ body.dark-theme a {
 
 
 .btn1{
+
     display: inline-block;
     box-sizing: border-box;
     padding: 0 20px;
-    margin: 0 15px 15px 0;
+    margin: 5px 15px 15px 0;
     outline: none;
     border: none;
     border-radius: 4px;
-    height: 22px;
+    height: 25px;
     line-height: 32px;
     font-size: 12px;
     /*font-weight: 500;*/
     text-decoration: none;
     color: #fff;
-    background-color: #3775dd;
+    /*background-color: #3775dd;*/
+    background: #0033cc;
     box-shadow: 0 2px #21487f;
     cursor: pointer;
     user-select: none;

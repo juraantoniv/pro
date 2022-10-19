@@ -14,7 +14,7 @@ const GetGenre = () => {
 
     const dispatch = useDispatch()
 
-    const {movies}=useSelector(state => state.movieReducer)
+    const {movies,page}=useSelector(state => state.movieReducer)
 
     let {Action}= useParams()
 
@@ -29,7 +29,7 @@ const GetGenre = () => {
     return (
         <div>
 
-            <h3>{movies.page}</h3>
+            <h3 className={css.page}>Page : {movies.page}</h3>
 
             <div className={css.cars_list}>
                 {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}

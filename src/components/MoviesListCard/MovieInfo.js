@@ -42,8 +42,8 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
                 <h3>{setMovie?.original_title}</h3>
                 <div>{setMovie?.overview}</div>
                  <h3>{showAll(setMovie?.genre_ids)}</h3>
-                <div>Relase date: {setMovie?.release_date}</div>
-                 <hr/>
+                {setMovie.toString().length>0 && <div> Relase date: {setMovie?.release_date}</div>}
+
                 {setMovie.toString().length>0 && <div>Vote average: {setMovie?.vote_average}</div>}
 
                 { setMovie.toString().length>0 && <div className={css.info}>
