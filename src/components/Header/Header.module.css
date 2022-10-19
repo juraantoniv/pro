@@ -10,7 +10,7 @@ body {
 
 .Header{
     display: flex;
-    background: crimson;
+    background:darkblue;
     height: 150px;
     width: 100%;
     justify-content: center;

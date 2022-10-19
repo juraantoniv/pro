@@ -43,7 +43,7 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
 
                  <div className={css.info}>
 
-                     {details.budget>0 && <div>Budget: {details.budget} $ </div>}
+                     {details.budget > 0 && <div>Budget: {details.budget} $ </div>}
                      {details.homepage && <div>Homepage: {details.homepage}</div>}
                      <h4>Poster</h4>
                      <img src={`http://image.tmdb.org/t/p/w500/${details.poster_path}`} alt='img_at'/>
@@ -61,7 +61,7 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
                         </div>
 
 
-                    </div>
+                    </div>}
 
 
         </div>

@@ -10,8 +10,8 @@ const Header = () => {
 
 
     const [query, setQuery] = useState("")
-    const [prev, setPrev] = useState(null);
-    const [next, setNext] = useState(null);
+    const [prev, setPrev] = useState(1);
+    const [next, setNext] = useState(1);
     const [value, setValue] = useState(false)
     const [darkTheme, setDarkTheme] = useState(false)
 
@@ -36,7 +36,6 @@ const Header = () => {
 
    useEffect(()=>{
        dispatch(getMovies.getAllMovies(queryPage.get('page')))
-       setPrev(prev)
        setNext(next)
        
    },[dispatch, next, prev,queryPage])
@@ -51,10 +50,17 @@ const Header = () => {
 
     const prevPage = () => {
         setQueryPage(value=>({page:value.get('page')-1}))
+        setPrev(prev-1)
+        setNext(next-1)
+
+        console.log(prev)
 
     }
     const nextPage = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
+        setNext(next+1)
+        setPrev(prev+1)
+        console.log(next)
     }
 
 
@@ -114,7 +120,7 @@ const Header = () => {
             </div>
 
             </div>
-            <button onClick={prevPage}>prevPage</button>
+            <button disabled={!prev} onClick={prevPage}>prevPage</button>
             <button onClick={nextPage}>nextPage</button>
         </div>
     );

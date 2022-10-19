@@ -29,7 +29,7 @@ const MoviesListCard = ({movie}) => {
                 <hr/>
                 <div>Relase date: {release_date}</div>
                 <hr/>
-                <div>Середня оцінка: {vote_average}</div>
+                <div>Vote average: {vote_average}</div>
                 <Rating name="half-rating" defaultValue={+movie?.vote_average} precision={0.5} max={10} />
                 </div>
             </Link>

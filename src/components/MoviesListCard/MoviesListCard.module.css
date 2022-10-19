@@ -8,7 +8,7 @@
     justify-content: center;
     overflow: hidden;
     border-radius: 5px;
-    background: white;
+    background:darkslateblue;
     padding-bottom: 15px;
     text-decoration: none
 
@@ -56,7 +56,7 @@ image{
 .card_of_movie:hover {
     transition: all linear .1s;
     border: 1px solid #59c7fb;
-    background: coral;
+    background:mediumblue;
 
 }
 .ribbon {
@@ -136,9 +136,6 @@ image{
 }
 
  .info{
-
     margin-top: 30px;
-
-
 
  }
