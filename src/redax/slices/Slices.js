@@ -72,10 +72,10 @@ const getConfiguration = createAsyncThunk(
 
 const getMovie = createAsyncThunk(
     'movieSlice/search',
-    async (name, {rejectWithValue}) => {
+    async ({name,page}, {rejectWithValue}) => {
 
         try {
-            const {data} = await movieService.getMovie(name)
+            const {data} = await movieService.getMovie(name,page)
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -104,10 +104,10 @@ const getMovie_byiD= createAsyncThunk(
 
 const getGenres = createAsyncThunk(
     'movieSlice/genres',
-    async (name, {rejectWithValue}) => {
+    async ({name,page}, {rejectWithValue}) => {
 
         try {
-            const {data} = await movieService.getGenres(name)
+            const {data} = await movieService.getGenres(name,page)
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)

@@ -20,10 +20,10 @@ const GetGenre = () => {
 
 
 
-    useEffect(() => {
-
-        dispatch(getMovies.getGenres(Action))
-    },[dispatch,Action])
+    // useEffect(() => {
+    //
+    //     dispatch(getMovies.getGenres(Action))
+    // },[dispatch,Action])
 
 
     return (

@@ -53,9 +53,16 @@ a{
 
 image{
     top: 0;
-    height: 100%;
+    /*height: 100%;*/
     width: 100%;
+    border-radius: 5px;
 
+}
+
+.image{
+    height:50%;
+    border-radius: 5px;
+    margin-bottom: 68px;
 }
 
 
@@ -156,4 +163,9 @@ image{
     background: #0033cc;
     margin-left: 20px;
 
+}
+
+.overview{
+    height: 50px;
+    overflow: hidden;
 }

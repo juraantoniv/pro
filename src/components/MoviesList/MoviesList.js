@@ -18,7 +18,7 @@ const MoviesList = () => {
     return (
         <div>
 
-            {/*<h3 className={css.page}>  Page: {page}</h3>*/}
+            <h3 className={css.page}>  Page: {movies.page}</h3>
 
 
         <div className={css.cars_list}>

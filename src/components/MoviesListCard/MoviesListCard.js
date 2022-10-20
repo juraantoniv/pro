@@ -23,12 +23,12 @@ const MoviesListCard = ({movie}) => {
 
             <Link to={'/Info'} state={{id}}> <div onClick={()=>dispatch(getMovies.setCurrentFilm(movie))} className={css.card_of_movie}>
                 <div className={css.ribbon}><span>{showAll(genre_ids)}</span></div>
-            <img src={`http://image.tmdb.org/t/p/w500/${backdrop_path}`} alt='img_at'/>
+            <img className={css.image} src={`http://image.tmdb.org/t/p/w500/${backdrop_path}`} alt='img_at'/>
             <h3>{original_title}</h3>
-            <div>{overview}</div>
-                <hr/>
+            <div className={css.overview}>{overview}</div>
+                <br/>
                 <div>Relase date: {release_date}</div>
-                <hr/>
+                <br/>
                 <div>Vote average: {vote_average}</div>
                 <Rating name="half-rating" defaultValue={+movie?.vote_average} precision={0.5} max={10} />
                 </div>

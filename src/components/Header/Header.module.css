@@ -1,12 +1,12 @@
-:root {
-    --var-bgcolor: #fff;
-    --var-fontcolor: #000;
-}
+/*:root {*/
+/*    --var-bgcolor: #fff;*/
+/*    --var-fontcolor: #000;*/
+/*}*/
 
-body {
-    background-color: var(--var-bgcolor);
-    color: var(--var-fontcolor);
-}
+/*body {*/
+/*    background-color: var(--var-bgcolor);*/
+/*    color: var(--var-fontcolor);*/
+/*}*/
 
 .Header{
     display: flex;
@@ -27,14 +27,6 @@ a {
     color: #0033cc;
 }
 
-/* Стили Тёмной темы */
-body.darktheme {
-    color: #eee;
-    background: #121212;
-}
-body.dark-theme a {
-    color: #809fff;
-}
 
 .btn {
     display: inline-block;
@@ -154,3 +146,35 @@ body.dark-theme a {
     background-color: #6c87b5;
     pointer-events: none;
 }
+
+/*:root {*/
+/*    --background: white !important;*/
+/*    --text-primary: black;*/
+/*    --text-secondary: royalblue;*/
+/*    --accent: purple;*/
+/*}*/
+
+
+/*[data-theme='dark'] {*/
+/*    --background: black !important;*/
+/*    --text-primary: white;*/
+/*    --text-secondary: grey;*/
+/*    --accent: darkred;*/
+/*}*/
+
+/*.App1 {*/
+/*    color: var(--text-primary);*/
+/*    background-color: var(--background);*/
+/*    font-size: large;*/
+/*    font-weight: bold;*/
+/*    padding: 20px;*/
+/*    height:20px;*/
+/*    transition: all .5s;*/
+/*}*/
+/*button {*/
+/*    color: var(--text-primary);*/
+/*    background-color: var(--background);*/
+/*    border: 2px var(--text-primary) solid;*/
+/*    float: right;*/
+/*    transition: all .5s;*/
+/*}*/

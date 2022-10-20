@@ -5,7 +5,7 @@ import css from './Header.MoviePAge.css'
 
 const HeaderMoviePAge = () => {
     return (
-        <div className={'1'}>
+        <div>
             <Header/>
             <Outlet/>
         </div>

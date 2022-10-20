@@ -1,17 +1,37 @@
-import { createGlobalStyle } from "styled-components";
+import useLocalStorage from 'use-local-storage'
 
-export const lightTheme = {
-    body: "#fff",
-    fontColor: "#000",
+
+
+
+
+import React from 'react';
+import css from "./Header.module.css";
+
+const Switch = () => {
+
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+    const swichTheme = ()=>{
+
+        const newTheme =theme==='light'?'dark':'light';
+        setTheme(newTheme)
+
+    }
+
+
+    return (
+        <div>
+
+            <div className={css.App1} data-theme={theme}>
+                <button onClick={swichTheme}>
+                    Swich to {theme==='light' ? 'Dark' :'Light'} Theme
+                </button>
+        </div>
+        </div>
+    );
 };
 
-export const darkTheme = {
-    body: "#000",
-    fontColor: "#fff",
-};
-
-export const GlobalStyles = createGlobalStyle`
-	body {
-		background-color: ${(props) => props.theme.body};
-	}
-`;
+export {
+    Switch
+}
