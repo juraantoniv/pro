@@ -178,3 +178,26 @@ a {
 /*    float: right;*/
 /*    transition: all .5s;*/
 /*}*/
+
+
+.btn12{
+
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 5px 15px 15px 0;
+    outline: none;
+    background:midnightblue;
+    border: none;
+    height: 25px;
+    line-height: 32px;
+    font-size: 18px;
+    /*font-weight: 500;*/
+    text-decoration: none;
+    color: #fff;
+    /*background-color: #3775dd;*/
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}

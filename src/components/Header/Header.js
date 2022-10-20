@@ -121,9 +121,7 @@ import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import css from "./Header.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
-import {Navbar} from "react-bootstrap";
 import {Switch} from "./Switch";
-import async from "async";
 import useLocalStorage from "use-local-storage";
 
 const Header = () => {
@@ -183,25 +181,18 @@ const Header = () => {
 
     useEffect(() => {
         dispatch(getMovies.getName())
-    },[])
+    },[dispatch])
 
 
     useEffect(() => {
         dispatch(getMovies.getConfiguration())
-    },[])
+    },[dispatch])
 
 
     page = queryPage.get('page');
 
 
 
-
-
-
-    // useEffect(() => {
-    //     dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
-    //     console.log('3')
-    // },[dispatch, query, queryPage])
 
 
 
@@ -239,6 +230,12 @@ const Header = () => {
     }
     const nextPage4 = () => {
         setQueryPage(value=>({page:+value.get('page')+4}))
+        setNext(next)
+
+
+    }
+    const nextPage5 = () => {
+        setQueryPage(value=>({page:+value.get('page')-page+1}))
         setNext(next)
 
 
@@ -292,6 +289,8 @@ const Header = () => {
             </div>
             <button className={css.btn1} disabled={+page===1} onClick={prevPage}>prevPage</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage}>nextPage</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage5}>{+page-(+page-1)}</button>
+            <button className={css.btn12}>...</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage1}>{+page+1}</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage2}>{+page+2}</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage3}>{+page+3}</button>

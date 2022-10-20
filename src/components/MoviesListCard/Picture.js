@@ -1,6 +1,5 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import {getMovies} from "../../redax";
 import css from "./MoviesListCard.module.css";
 import {Link} from "react-router-dom";
 
@@ -24,4 +23,6 @@ const Picture = () => {
 
 
 
-export default Picture;
+export {
+    Picture
+}

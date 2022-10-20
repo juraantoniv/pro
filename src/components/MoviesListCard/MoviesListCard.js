@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './MoviesListCard.module.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {getMovies} from "../../redax";
 import {Link} from "react-router-dom";
-import {showAll, showGenre} from "../../Functions/Functions";
+import {showAll} from "../../Functions/Functions";
 
 import Rating from "@mui/material/Rating";
 

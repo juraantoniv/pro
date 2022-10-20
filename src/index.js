@@ -4,7 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {Provider} from "react-redux";
 import {setupStore} from "./redax";
 import App from "./App";
-import { StyledEngineProvider } from '@mui/material/styles';
+
 
 const store = setupStore()
 
@@ -16,7 +16,6 @@ root.render(
         <BrowserRouter>
 
             <App/>
-
 
         </BrowserRouter>
     </Provider>

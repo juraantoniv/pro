@@ -1,31 +1,18 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useSelector} from "react-redux";
 import css from './MoviesList.module.css'
 
 
 
 import {useDispatch} from "react-redux";
-import {getMovies} from "../../redax";
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import {useLocation, useParams} from "react-router-dom";
 
 
 const GetGenre = () => {
 
-    const dispatch = useDispatch()
+
 
     const {movies,page}=useSelector(state => state.movieReducer)
-
-    let {Action}= useParams()
-
-
-
-    // useEffect(() => {
-    //
-    //     dispatch(getMovies.getGenres(Action))
-    // },[dispatch,Action])
-
-
     return (
         <div>
 

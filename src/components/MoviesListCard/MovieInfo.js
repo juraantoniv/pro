@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
 import css from "./MoviesListCard.module.css";
-import {Link, useParams} from "react-router-dom";
-import {showAll, showGenre} from "../../Functions/Functions";
-import Rating from "@mui/material/Rating";
+import {Link} from "react-router-dom";
+import {showAll} from "../../Functions/Functions";
+
 
 import MoviesListCard from "./MoviesListCard";
 
@@ -74,4 +74,7 @@ const {setMovie,top,details}=useSelector(state => state.movieReducer)
 
 
 
-export default MovieInfo;
+export {
+    MovieInfo
+
+}
