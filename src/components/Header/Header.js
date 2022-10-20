@@ -219,6 +219,30 @@ const Header = () => {
         setPrev(prev+1)
 
     }
+    const nextPage1 = () => {
+        setQueryPage(value=>({page:+value.get('page')+1}))
+        setNext(next+3)
+
+
+    }
+    const nextPage2 = () => {
+        setQueryPage(value=>({page:+value.get('page')+2}))
+        setNext(next)
+
+
+    }
+    const nextPage3 = () => {
+        setQueryPage(value=>({page:+value.get('page')+3}))
+        setNext(next)
+
+
+    }
+    const nextPage4 = () => {
+        setQueryPage(value=>({page:+value.get('page')+4}))
+        setNext(next)
+
+
+    }
 
 
 
@@ -268,6 +292,10 @@ const Header = () => {
             </div>
             <button className={css.btn1} disabled={+page===1} onClick={prevPage}>prevPage</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage}>nextPage</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage1}>{+page+1}</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage2}>{+page+2}</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage3}>{+page+3}</button>
+            <button className={css.btn1} disabled={+page===500} onClick={nextPage4}>{+page+4}</button>
         </div>
     );
 };
