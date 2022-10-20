@@ -147,7 +147,7 @@ const Header = () => {
             console.log('Ganre')
 
         }
-        else if (query && Action){
+        else if (query || Action){
 
              dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
             console.log('Search')
