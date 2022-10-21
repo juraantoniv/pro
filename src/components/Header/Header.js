@@ -281,8 +281,8 @@ const Header = () => {
                 </div>
                 <div className={css.name}>
                     <h3>Welcome : {name.username}</h3>
-                    {/*<img className={css.image} src={`http://image.tmdb.org/t/p/w500/${name.avatar.avatar_path}`} alt='img_at'/>*/}
-                    {/*<img className={css.image} src={'3pFNaAwY9EOgvqbS8G0HdPYQSWt.jpg'} alt='img_at'/>*/}
+                    <img className={css.image_name} src={`http://image.tmdb.org/t/p/w500/${name.avatar.tmdb.avatar_path}`} alt='img_at'/>
+
                 </div>
 
             </div>

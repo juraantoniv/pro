@@ -47,7 +47,7 @@ const getName = createAsyncThunk(
 
         try {
             const {data} = await movieService.getAccount()
-            console.log(data.avatar.tmbd)
+            console.log(data.avatar.tmdb.avatar_path)
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
