@@ -24,7 +24,8 @@ body {
     background:midnightblue;
 }
 a {
-    color: #0033cc;
+    color:white;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -37,6 +38,44 @@ a {
     border: none;
     border-radius: 4px;
     height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background: #0033cc;
+    box-shadow: 0 2px #21487f;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+.btn:hover {
+    background-color: #002fed;
+}
+.btn:active {
+    background-color: #2f599e !important;
+}
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:disabled {
+    background-color: #6c87b5;
+    pointer-events: none;
+}
+
+
+.btn_top_page {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    width: 200px;
     line-height: 32px;
     font-size: 14px;
     font-weight: 500;
@@ -147,12 +186,14 @@ a {
     pointer-events: none;
 }
 
-/*:root {*/
-/*    --background: white !important;*/
-/*    --text-primary: black;*/
-/*    --text-secondary: royalblue;*/
-/*    --accent: purple;*/
-/*}*/
+
+
+:root {
+    --background: white !important;
+    --text-primary: black;
+    --text-secondary: royalblue;
+    --accent: purple;
+}
 
 
 /*[data-theme='dark'] {*/
@@ -162,22 +203,22 @@ a {
 /*    --accent: darkred;*/
 /*}*/
 
-/*.App1 {*/
-/*    color: var(--text-primary);*/
-/*    background-color: var(--background);*/
-/*    font-size: large;*/
-/*    font-weight: bold;*/
-/*    padding: 20px;*/
-/*    height:20px;*/
-/*    transition: all .5s;*/
-/*}*/
-/*button {*/
-/*    color: var(--text-primary);*/
-/*    background-color: var(--background);*/
-/*    border: 2px var(--text-primary) solid;*/
-/*    float: right;*/
-/*    transition: all .5s;*/
-/*}*/
+.App1 {
+    color: var(--text-primary);
+    background-color: var(--background);
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    height:20px;
+    transition: all .5s;
+}
+.swich_button {
+    color: var(--text-primary);
+    background-color: var(--background);
+    border: 2px var(--text-primary) solid;
+    float: right;
+    transition: all .5s;
+}
 
 
 .btn12{

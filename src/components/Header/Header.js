@@ -148,6 +148,7 @@ const Header = () => {
         else if (query || Action){
 
              dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
+            queryPage.get('page')
             console.log('Search')
 
         }
@@ -166,15 +167,15 @@ const Header = () => {
 
 
 
-    // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
-    //
-    // const swichTheme = ()=>{
-    //
-    //     const newTheme =theme==='light'?'dark':'light';
-    //     setTheme(newTheme)
-    //
-    // }
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+    const swichTheme = ()=>{
+
+        const newTheme =theme==='light'?'dark':'light';
+        setTheme(newTheme)
+
+    }
 
 
 
@@ -251,11 +252,7 @@ const Header = () => {
                 <div>
                     <div>
                         <div>
-                        {/*<div className={css.App1} data-theme={theme}>*/}
-                        {/*    <button onClick={swichTheme}>*/}
-                        {/*        Switch to {theme==='light' ? 'Dark' :'Light'} Theme*/}
-                        {/*    </button>*/}
-                        <Switch/>
+                        {/*<Switch/>*/}
                         </div>
                         {/*<img src={'src/components/Header/Img/Знімок екрана 2022-10-19 143920.jpg'} alt={'img'}/>*/}
                     </div>
@@ -289,7 +286,7 @@ const Header = () => {
             </div>
             <button className={css.btn1} disabled={+page===1} onClick={prevPage}>prevPage</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage}>nextPage</button>
-            <button className={css.btn1} disabled={+page===500} onClick={nextPage5}>{+page-(+page-1)}</button>
+            <button className={css.btn1} disabled={+page===1} onClick={nextPage5}>{+page-(+page-1)}</button>
             <button className={css.btn12}>...</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage1}>{+page+1}</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage2}>{+page+2}</button>

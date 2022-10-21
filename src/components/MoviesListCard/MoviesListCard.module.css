@@ -32,11 +32,16 @@ a{
     overflow: hidden;
     border-radius: 5px;
     text-decoration: none;
-    color: #8d8176;
     border: none !important;
     background: darkblue;
    padding-left: 10px;
+    color:aqua;
+    font-family: "Times New Roman", fantasy
 
+}
+
+.image{
+    border-radius: 5px;
 }
 
 .card_of_movie_info:empty{

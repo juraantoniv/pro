@@ -4,6 +4,7 @@ import useLocalStorage from 'use-local-storage'
 
 
 
+
 import React from 'react';
 import css from "./Header.module.css";
 
@@ -24,7 +25,7 @@ const Switch = () => {
         <div>
 
             <div className={css.App1} data-theme={theme}>
-                <button onClick={swichTheme}>
+                <button className={css.swich_button} onClick={swichTheme}>
                     Swich to {theme==='light' ? 'Dark' :'Light'} Theme
                 </button>
         </div>
