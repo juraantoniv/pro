@@ -27,7 +27,6 @@ let navigate = useNavigate()
         dispatch(getMovies.getTop())
     },[dispatch,setMovie])
 
-    console.log(setMovie)
 
 
     useEffect(() => {

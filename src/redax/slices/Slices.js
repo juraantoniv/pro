@@ -146,7 +146,6 @@ const movieSlice = createSlice({
         },
         [getMovie.rejected]: (state, action) => {
             state.errors = action.payload
-            console.log(state.errors)
 
         },
         [getMovie.rejected]: (state, action) => {

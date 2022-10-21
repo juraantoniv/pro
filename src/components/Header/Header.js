@@ -20,8 +20,6 @@ const Header = () => {
 
     let {id}= useParams()
 
-
-
     useEffect(() => {
 
         if (id && !query ){
@@ -36,17 +34,13 @@ const Header = () => {
             console.log('Search')
 
         }
-        else{
-
+        else {
                 dispatch(getMovies.getAllMovies(queryPage.get('page')))
                 console.log('All')
 
         }
 
     },[id, dispatch, next, prev, query, queryPage])
-
-
-
 
 
 
@@ -62,8 +56,6 @@ const Header = () => {
     }
 
 
-
-
     useEffect(() => {
         dispatch(getMovies.getName())
     },[dispatch])
@@ -75,10 +67,6 @@ const Header = () => {
 
 
     page = queryPage.get('page');
-
-
-
-
 
 
 
@@ -138,7 +126,7 @@ const Header = () => {
                         <div>
                         {/*<Switch/>*/}
                         </div>
-                        <button onClick={() => navigate('/Movies')} className={css.btn_top_page}>Home Page</button>
+                        <button onClick={() => navigate('/')}  className={css.btn_top_page}>Home Page</button>
                     </div>
                     <div></div>
                     <div></div>
@@ -155,11 +143,14 @@ const Header = () => {
                                    value={query}
                             />
                         </form>
-                        <button onClick={() => navigate('28')} className={css.btn}>Action</button>
-                        <button onClick={() => navigate('12')} className={css.btn}>Adventure</button>
-                        <button onClick={() => navigate('35')} className={css.btn}>Comedy</button>
-                        <button onClick={() => navigate('80')} className={css.btn}>Crime</button>
-                        <button onClick={() => navigate('99')} className={css.btn}>Documentary</button>
+                        <button  disabled={+id===18} onClick={() => navigate('18')} className={css.btn}>Drama</button>
+                        <button disabled={+id===10749} onClick={() => navigate('10749')} className={css.btn}>Romance</button>
+                        <button disabled={+id===28} onClick={() => navigate('28')} className={css.btn}>Action</button>
+                        <button disabled={+id===12} onClick={() => navigate('12')} className={css.btn}>Adventure</button>
+                        <button disabled={+id===35} onClick={() => navigate('35')} className={css.btn}>Comedy</button>
+                        <button disabled={+id===80} onClick={() => navigate('80')} className={css.btn}>Crime</button>
+                        <button disabled={+id===99} onClick={() => navigate('99')} className={css.btn}>Documentary</button>
+                        <button disabled={+id===10752} onClick={() => navigate('10752')} className={css.btn}>War</button>
 
                     </div>
 
