@@ -12,6 +12,7 @@ const MoviesList = () => {
     const {movies,errors,page}=useSelector(state => state.movieReducer)
 
 
+
     return (
         <div>
 

@@ -47,6 +47,7 @@ const getName = createAsyncThunk(
 
         try {
             const {data} = await movieService.getAccount()
+            console.log(data.avatar.tmbd)
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -138,7 +139,6 @@ const movieSlice = createSlice({
         },
         [getAllMovies.rejected]: (state, action) => {
             state.errors = action.payload
-            console.log(state.errors)
 
         },
         [getMovie.fulfilled]: (state, action) => {
@@ -148,6 +148,10 @@ const movieSlice = createSlice({
         [getMovie.rejected]: (state, action) => {
             state.errors = action.payload
             console.log(state.errors)
+
+        },
+        [getMovie.rejected]: (state, action) => {
+            state.errors = action.payload
 
         },
         [getName.fulfilled]: (state, action) => {

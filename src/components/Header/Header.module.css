@@ -26,6 +26,8 @@ body {
 a {
     color:white;
     font-family: Arial, sans-serif;
+    display: flex;
+    text-align: center;
 }
 
 
