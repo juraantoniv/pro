@@ -24,10 +24,7 @@ function App() {
           <Route element={<HeaderMoviePAge/>}>
             <Route index element={<Navigate to={'/Movies'}/>}/>
             <Route path={'Movies'} element={<MoviesList/>}/>
-            <Route path={':Action'} element={<MoviesList/>}/>
-            <Route path={':Comedy'} element={<MoviesList/>}/>
-            <Route path={':Crime'} element={<MoviesList/>}/>
-            <Route path={':Documentary'} element={<MoviesList/>}/>
+            <Route path={':id'} element={<MoviesList/>}/>
           </Route>
           <Route path={'/Info'} element={<MovieInfo/>}/>
           <Route path={'/Picture'} element={<Picture/>}/>

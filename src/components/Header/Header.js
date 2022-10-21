@@ -18,18 +18,18 @@ const Header = () => {
     const dispatch = useDispatch()
     const {name,configuration}=useSelector(state => state.movieReducer)
 
-    let {Action}= useParams()
+    let {id}= useParams()
 
 
 
     useEffect(() => {
 
-        if (Action && !query ){
-            dispatch(getMovies.getGenres({name:Action,page:queryPage.get('page')}))
+        if (id && !query ){
+            dispatch(getMovies.getGenres({name:id,page:queryPage.get('page')}))
             console.log('Ganre')
 
         }
-        else if (query || Action){
+        else if (query || id){
 
              dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
             queryPage.get('page')
@@ -43,7 +43,7 @@ const Header = () => {
 
         }
 
-    },[Action, dispatch, next, prev, query, queryPage])
+    },[id, dispatch, next, prev, query, queryPage])
 
 
 
@@ -155,7 +155,7 @@ const Header = () => {
                                    value={query}
                             />
                         </form>
-                        <button onClick={() => navigate('53')} className={css.btn}>Action</button>
+                        <button onClick={() => navigate('28')} className={css.btn}>Action</button>
                         <button onClick={() => navigate('12')} className={css.btn}>Adventure</button>
                         <button onClick={() => navigate('35')} className={css.btn}>Comedy</button>
                         <button onClick={() => navigate('80')} className={css.btn}>Crime</button>
