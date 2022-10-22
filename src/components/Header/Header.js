@@ -12,8 +12,6 @@ const Header = () => {
 
 
     const [query, setQuery] = useState("")
-    const [prev, setPrev] = useState(1);
-    const [next, setNext] = useState(1);
     let [queryPage, setQueryPage,page] = useSearchParams({page:'1'});
     const dispatch = useDispatch()
     const {name,configuration}=useSelector(state => state.movieReducer)
@@ -22,28 +20,22 @@ const Header = () => {
 
     useEffect(() => {
 
-        if (id && !query ){
+        if (id && !query){
             dispatch(getMovies.getGenres({name:id,page:queryPage.get('page')}))
             console.log('Ganre')
-
         }
         else if (query || id){
 
              dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
             queryPage.get('page')
             console.log('Search')
-
         }
         else {
                 dispatch(getMovies.getAllMovies(queryPage.get('page')))
                 console.log('All')
-
         }
 
-    },[id, dispatch, next, prev, query, queryPage])
-
-
-
+    },[id, dispatch, query, queryPage])
 
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
@@ -52,7 +44,6 @@ const Header = () => {
 
         const newTheme =theme==='light'?'dark':'light';
         setTheme(newTheme)
-
     }
 
 
@@ -65,59 +56,30 @@ const Header = () => {
         dispatch(getMovies.getConfiguration())
     },[dispatch])
 
-
     page = queryPage.get('page');
-
-
 
     const prevPage = () => {
         setQueryPage(value=>({page:value.get('page')-1}))
-        setPrev(prev-1)
-        setNext(next-1)
-
-
     }
     const nextPage = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
-        setNext(next+1)
-        setPrev(prev+1)
-
     }
     const nextPage1 = () => {
         setQueryPage(value=>({page:+value.get('page')+1}))
-        setNext(next+3)
-
-
     }
     const nextPage2 = () => {
         setQueryPage(value=>({page:+value.get('page')+2}))
-        setNext(next)
-
-
     }
     const nextPage3 = () => {
         setQueryPage(value=>({page:+value.get('page')+3}))
-        setNext(next)
-
-
     }
     const nextPage4 = () => {
         setQueryPage(value=>({page:+value.get('page')+4}))
-        setNext(next)
-
-
     }
     const nextPage5 = () => {
         setQueryPage(value=>({page:+value.get('page')-page+1}))
-        setNext(next)
-
-
     }
-
-
-
     const navigate = useNavigate();
-
     return (
         <div>
             <div className={css.Header}>

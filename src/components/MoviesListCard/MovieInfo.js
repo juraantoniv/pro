@@ -58,7 +58,7 @@ let navigate = useNavigate()
 
                  </div>
                     <div className={css.flex}>
-                        <button onClick={() => navigate('/Movies')} className={css1.btn_top_page}>Home Page</button>
+                        <button onClick={() => navigate('/')} className={css1.btn_top_page}>Home Page</button>
                         <h1>Top 20 rated</h1>
                         <div className={css.cars_list}>
 

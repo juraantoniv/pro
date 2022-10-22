@@ -21,7 +21,7 @@ const MoviesListCard = ({movie}) => {
     return (
         <div>
 
-            <Link to={'/Info'} state={{id}}> <div onClick={()=>dispatch(getMovies.setCurrentFilm(movie))} className={css.card_of_movie}>
+            <Link to={'/Info'}> <div onClick={()=>dispatch(getMovies.setCurrentFilm(movie))} className={css.card_of_movie}>
                 <div className={css.ribbon}><span>{showAll(genre_ids)}</span></div>
             <img className={css.image} src={`http://image.tmdb.org/t/p/w500/${backdrop_path}`} alt='img_at'/>
             <h3>{original_title}</h3>
