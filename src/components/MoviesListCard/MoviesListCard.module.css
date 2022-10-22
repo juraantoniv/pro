@@ -174,3 +174,21 @@ image{
     height: 50px;
     overflow: hidden;
 }
+
+.recommendation{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+    background: #002fed;
+    border-radius: 10px;
+
+}
+
+.recommendation:hover{
+    text-decoration: underline;
+
+}

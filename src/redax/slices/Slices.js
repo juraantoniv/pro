@@ -11,7 +11,8 @@ const initialState = {
     setMovie:[],
     errors:null,
     details:[],
-    page:null
+    page:null,
+    reviews:[]
 }
 
 
@@ -117,6 +118,21 @@ const getGenres = createAsyncThunk(
     }
 )
 
+const getReviews = createAsyncThunk(
+    'movieSlice/reviews',
+    async (id, {rejectWithValue}) => {
+
+        try {
+            const {data} = await movieService.getReviews(id)
+            return data
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
@@ -164,6 +180,10 @@ const movieSlice = createSlice({
             state.movies= action.payload
 
         },
+        [getReviews.fulfilled]: (state, action) => {
+            state.reviews = action.payload
+
+        },
     },
 });
 
@@ -177,7 +197,8 @@ const getMovies = {
     getGenres,
     setCurrentFilm,
     getTop,
-    getMovie_byiD
+    getMovie_byiD,
+    getReviews
 }
 
 export {

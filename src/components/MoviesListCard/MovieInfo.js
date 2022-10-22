@@ -13,13 +13,9 @@ const MovieInfo = () => {
 
 const {setMovie,top,details}=useSelector(state => state.movieReducer)
 
-
-
 let navigate = useNavigate()
 
     let {id}=setMovie
-
-
 
     const dispatch = useDispatch()
 
@@ -45,6 +41,8 @@ let navigate = useNavigate()
 
                 {setMovie.toString().length>0 && <div>Vote average: {setMovie?.vote_average}</div>}
 
+                    <button onClick={() => navigate('/Recommendation'+id)}  className={css1.btn_top_page}>Recommendation</button>
+
                 { setMovie.toString().length>0 && <div className={css.info}>
                      {details.budget > 0 && <div>Budget: {details.budget} $ </div>}
                      {details.homepage && <div>Homepage: {details.homepage}</div>}
@@ -52,6 +50,7 @@ let navigate = useNavigate()
                      <img className={css.image} src={`http://image.tmdb.org/t/p/w500/${details.poster_path}`} alt='img_at'/>
                      <h3>Citate : {details.tagline}</h3>
                      <h4>Original_language : {details.original_language}</h4>
+
 
                  </div>}
                  </div>}

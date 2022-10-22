@@ -8,7 +8,8 @@ import {
 
 
 import {HeaderMoviePAge} from "./MoviesPage";
-import {MovieInfo, MoviesList, Picture} from "./components";
+import {MovieInfo, MoviesList, Picture, RecommendationPage} from "./components";
+
 
 
 
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route path={'/Info'} element={<MovieInfo/>}/>
           <Route path={'/Picture'} element={<Picture/>}/>
+          <Route path={'/Recommendation:id'} element={<RecommendationPage/>}/>
         </Routes>
       </div>
   );

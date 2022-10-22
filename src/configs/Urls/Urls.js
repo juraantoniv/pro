@@ -9,7 +9,8 @@ const urls = {
     search:'/search',
     with_genres:'/with_genres',
     top_rated:'/movie/top_rated',
-    get_details:'/movie'
+    get_details:'/movie',
+    get_reviews:'movie'
 
 }
 

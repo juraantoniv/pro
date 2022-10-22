@@ -30,7 +30,7 @@ body {
     background:midnightblue;
 }
 a {
-    color:white;
+    color: white !important;
     font-family: Arial, sans-serif;
     display: flex;
     text-align: center;
