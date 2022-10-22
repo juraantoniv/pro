@@ -9,6 +9,7 @@ import css1 from '../Header/Header.module.css'
 import MoviesListCard from "./MoviesListCard";
 
 
+
 const MovieInfo = () => {
 
 const {setMovie,top,details}=useSelector(state => state.movieReducer)
@@ -64,7 +65,6 @@ let navigate = useNavigate()
                             {top.results?.map(movie =>
                                 <MoviesListCard key={movie.id} movie={movie}/>)}
                         </div>
-
 
                     </div>
 
