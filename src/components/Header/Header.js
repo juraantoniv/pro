@@ -4,9 +4,8 @@ import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import css from "./Header.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
-import {Switch} from "./Switch";
-import useLocalStorage from "use-local-storage";
-import css1 from "./Header.module.css";
+
+
 
 const Header = () => {
 
@@ -14,7 +13,7 @@ const Header = () => {
     const [query, setQuery] = useState("")
     let [queryPage, setQueryPage,page] = useSearchParams({page:'1'});
     const dispatch = useDispatch()
-    const {name,configuration}=useSelector(state => state.movieReducer)
+    const {name}=useSelector(state => state.movieReducer)
 
     let {id}= useParams()
 
@@ -37,14 +36,9 @@ const Header = () => {
 
     },[id, dispatch, query, queryPage])
 
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
-    const swichTheme = ()=>{
 
-        const newTheme =theme==='light'?'dark':'light';
-        setTheme(newTheme)
-    }
+
 
 
     useEffect(() => {
@@ -52,9 +46,7 @@ const Header = () => {
     },[dispatch])
 
 
-    useEffect(() => {
-        dispatch(getMovies.getConfiguration())
-    },[dispatch])
+
 
     page = queryPage.get('page');
 
@@ -86,7 +78,6 @@ const Header = () => {
                 <div>
                     <div>
                         <div>
-                        {/*<Switch/>*/}
                         </div>
                         <button onClick={() => navigate('/')}  className={css.btn_top_page}>Home Page</button>
                     </div>
