@@ -91,7 +91,7 @@ image{
     color: #FFF;
     text-transform: uppercase;
     text-align: center;
-    line-height: 20px;
+    line-height: 15px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     width: 130px;
@@ -104,7 +104,7 @@ image{
 }
 .ribbon span::before {
     content: "";
-    position: absolute; left: 0px; top: 100%;
+    position: absolute; left: 0; top: 100%;
     z-index: -1;
     border-left: 3px solid #79A70A;
     border-right: 3px solid transparent;
@@ -113,7 +113,7 @@ image{
 }
 .ribbon span::after {
     content: "";
-    position: absolute; right: 0px; top: 100%;
+    position: absolute; right: 0; top: 100%;
     z-index: -1;
     border-left: 3px solid transparent;
     border-right: 3px solid #79A70A;
