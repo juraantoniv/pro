@@ -9,7 +9,7 @@ import MoviesListCard from "../MoviesListCard/MoviesListCard";
 
 const MoviesList = () => {
 
-    const {movies,errors,page}=useSelector(state => state.movieReducer)
+    const {movies}=useSelector(state => state.movieReducer)
 
 
 
@@ -17,9 +17,6 @@ const MoviesList = () => {
         <div>
 
             <h3 className={css.page}>  Page: {movies.page}</h3>
-            {/*{JSON.stringify(errors)}*/}
-
-
         <div className={css.cars_list}>
 
             {movies.results?.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
