@@ -1,6 +1,6 @@
 export * from './MoviesListCard/MoviesListCard'
 export * from './MoviesListCard/MovieInfo'
-export * from './MoviesListCard/Picture'
+export * from './MoviesListCard/PosterPreview'
 export * from './MoviesListCard/StarsRating'
 export * from './Header/Header'
 export * from './MoviesList/MoviesList'

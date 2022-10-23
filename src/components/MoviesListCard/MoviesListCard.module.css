@@ -185,16 +185,14 @@ image{
     padding: 10px;
     background: #002fed;
     border-radius: 15px;
-
-
 }
 
 
 .rec_list{
     display: flex;
-    width: 1500px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:left;
+    align-items: flex-start;
     gap: 10px;
 
 }

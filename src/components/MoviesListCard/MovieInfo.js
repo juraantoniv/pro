@@ -34,7 +34,7 @@ let navigate = useNavigate()
         <div className={css.box}>
             <div className={css.card_of_movie_info}>
 
-                {setMovie.toString().length>0 && <div>{ setMovie.toString().length>0 && <Link to={'/Picture'}>< img  src={`http://image.tmdb.org/t/p/w500/${setMovie?.backdrop_path}`} alt='img_at'/></Link>}
+                {setMovie.toString().length>0 && <div>{ setMovie.toString().length>0 && <Link to={'/PosterPreview'}>< img  src={`http://image.tmdb.org/t/p/w500/${setMovie?.backdrop_path}`} alt='img_at'/></Link>}
                 <h3>{setMovie?.original_title}</h3>
                 <div>{setMovie?.overview}</div>
                  <h3>{showAll(setMovie?.genre_ids)}</h3>
