@@ -7,6 +7,7 @@ import {getMovies} from "../../redax";
 
 
 
+
 const Header = () => {
 
 
@@ -21,22 +22,17 @@ const Header = () => {
 
         if (id && !query){
             dispatch(getMovies.getGenres({name:id,page:queryPage.get('page')}))
-            console.log('Ganre')
         }
         else if (query || id){
 
              dispatch(getMovies.getMovie({name:query,page:queryPage.get('page')}))
             queryPage.get('page')
-            console.log('Search')
         }
         else {
                 dispatch(getMovies.getAllMovies(queryPage.get('page')))
-                console.log('All')
         }
 
     },[id, dispatch, query, queryPage])
-
-
 
 
 

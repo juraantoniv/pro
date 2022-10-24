@@ -187,31 +187,6 @@ a {
 
 
 
-:root {
-    --background: white !important;
-    --text-primary: black;
-    --text-secondary: royalblue;
-    --accent: purple;
-}
-
-.App1 {
-    color: var(--text-primary);
-    background-color: var(--background);
-    font-size: large;
-    font-weight: bold;
-    padding: 20px;
-    height:20px;
-    transition: all .5s;
-}
-.swich_button {
-    color: var(--text-primary);
-    background-color: var(--background);
-    border: 2px var(--text-primary) solid;
-    float: right;
-    transition: all .5s;
-}
-
-
 .btn12{
 
     display: inline-block;
