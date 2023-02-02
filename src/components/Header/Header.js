@@ -100,18 +100,12 @@ const Header = () => {
                         <button disabled={+id===80} onClick={() => navigate('80')} className={css.btn}>Crime</button>
                         <button disabled={+id===99} onClick={() => navigate('99')} className={css.btn}>Documentary</button>
                         <button disabled={+id===10752} onClick={() => navigate('10752')} className={css.btn}>War</button>
-
                     </div>
-
-
-
                 </div>
                 <div className={css.name}>
                     <h3>Welcome : {name.username}</h3>
                     <img className={css.image_name} src={`http://image.tmdb.org/t/p/w500/${name.avatar?.tmdb.avatar_path}`} alt='img_at'/>
-
                 </div>
-
             </div>
             <button className={css.btn1} disabled={+page===1} onClick={prevPage}>prevPage</button>
             <button className={css.btn1} disabled={+page===500} onClick={nextPage}>nextPage</button>
