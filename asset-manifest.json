@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "//juraantoniv.github.io/pro/static/css/main.2012954a.css",
+    "main.js": "//juraantoniv.github.io/pro/static/js/main.52fede2e.js",
+    "index.html": "//juraantoniv.github.io/pro/index.html",
+    "main.2012954a.css.map": "//juraantoniv.github.io/pro/static/css/main.2012954a.css.map",
+    "main.52fede2e.js.map": "//juraantoniv.github.io/pro/static/js/main.52fede2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2012954a.css",
+    "static/js/main.52fede2e.js"
+  ]
+}
