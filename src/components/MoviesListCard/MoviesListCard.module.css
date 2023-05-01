@@ -10,9 +10,13 @@
     border-radius: 5px;
     background:navy;
     padding-bottom: 15px;
-    text-decoration: none
+    text-decoration: none;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid blue;
 
 }
+
 
 a{
     color: #8d8176;
@@ -79,7 +83,7 @@ image{
 }
 .ribbon {
     position: absolute;
-    right: -5px; top: -5px;
+    right: -2px; top: -2px;
     z-index: 1;
     overflow: hidden;
     width: 95px; height: 95px;

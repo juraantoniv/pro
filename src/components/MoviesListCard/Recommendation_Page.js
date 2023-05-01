@@ -4,6 +4,8 @@ import {getMovies} from "../../redax";
 import {useDispatch, useSelector} from "react-redux";
 import css from "./MoviesListCard.module.css";
 import css1 from "../Header/Header.module.css";
+import {Button, IconButton} from "@mui/material";
+import HomeIcon from '@mui/icons-material/Home';
 
 const RecommendationPage = () => {
 
@@ -21,7 +23,8 @@ const RecommendationPage = () => {
 
     return (
         <div>
-            <button onClick={() => navigate('/')} className={css1.btn_top_page}>Home Page</button>
+
+            <IconButton  size="large" onClick={() => navigate('/')}  ><HomeIcon fontSize={'large'}/></IconButton>
 
             <div className={css.rec_list}>
 

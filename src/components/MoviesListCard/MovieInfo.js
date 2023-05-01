@@ -7,6 +7,8 @@ import {showAll} from "../../Functions/Functions";
 import css1 from '../Header/Header.module.css'
 
 import MoviesListCard from "./MoviesListCard";
+import {IconButton} from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
 
 
 
@@ -42,7 +44,7 @@ let navigate = useNavigate()
 
                 {setMovie.toString().length>0 && <div>Vote average: {setMovie?.vote_average}</div>}
 
-                    <button onClick={() => navigate('/Recommendation'+id)}  className={css1.btn_top_page}>Recommendation</button>
+                    <button onClick={() => navigate('/Recommendation/'+id)}  className={css1.btn_top_page}>Recommendation</button>
 
                 { setMovie.toString().length>0 && <div className={css.info}>
                      {details.budget > 0 && <div>Budget: {details.budget} $ </div>}
@@ -58,7 +60,7 @@ let navigate = useNavigate()
 
                  </div>
                     <div className={css.flex}>
-                        <button onClick={() => navigate('/')} className={css1.btn_top_page}>Home Page</button>
+                        <IconButton  size="large" onClick={() => navigate('/')} fontSize={'large'} sx={{width:50}} ><HomeIcon fontSize={'large'} /></IconButton>
                         <h1>Top 20 rated</h1>
                         <div className={css.cars_list}>
 

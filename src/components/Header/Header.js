@@ -4,7 +4,8 @@ import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import css from "./Header.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redax";
-
+import {IconButton, TextField} from "@mui/material";
+import HomeIcon from '@mui/icons-material/Home';
 
 
 
@@ -73,9 +74,9 @@ const Header = () => {
             <div className={css.Header}>
                 <div>
                     <div>
+                        <IconButton  size="large" onClick={() => navigate('/')} sx={{marginRight:50,marginTop:1 }} ><HomeIcon fontSize={'large'} /></IconButton>
                         <div>
                         </div>
-                        <button onClick={() => navigate('/')}  className={css.btn_top_page}>Home Page</button>
                     </div>
                     <div></div>
                     <div></div>
@@ -85,9 +86,9 @@ const Header = () => {
 
                     <div>
                         <form className={css.search}>
-                            <input type="text"
-                                   placeholder={"Search Movie"}
-                                   className={css.searchTerm}
+                            <TextField
+                                id="outlined-basic" label="Search Movie" variant="outlined" size={'small'}
+                                sx={{width:300}}
                                    onChange={event => setQuery(event.target.value)}
                                    value={query}
                             />

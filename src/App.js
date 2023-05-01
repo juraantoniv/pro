@@ -29,7 +29,7 @@ function App() {
           </Route>
           <Route path={'/Info'} element={<MovieInfo/>}/>
           <Route path={'/PosterPreview'} element={<PosterPreview/>}/>
-          <Route path={'/Recommendation:id'} element={<RecommendationPage/>}/>
+          <Route path={'/Recommendation/:id'} element={<RecommendationPage/>}/>
         </Routes>
       </div>
   );
