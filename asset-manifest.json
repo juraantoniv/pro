@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pro/static/css/main.47f1ec11.css",
-    "main.js": "/pro/static/js/main.fecf8cd9.js",
+    "main.css": "/pro/static/css/main.4dffd46a.css",
+    "main.js": "/pro/static/js/main.c71813c0.js",
     "static/media/red-theater-curtain-background-website-header.jpg": "/pro/static/media/red-theater-curtain-background-website-header.4ea2718218a54824a51e.jpg",
     "index.html": "/pro/index.html",
-    "main.47f1ec11.css.map": "/pro/static/css/main.47f1ec11.css.map",
-    "main.fecf8cd9.js.map": "/pro/static/js/main.fecf8cd9.js.map"
+    "main.4dffd46a.css.map": "/pro/static/css/main.4dffd46a.css.map",
+    "main.c71813c0.js.map": "/pro/static/js/main.c71813c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.47f1ec11.css",
-    "static/js/main.fecf8cd9.js"
+    "static/css/main.4dffd46a.css",
+    "static/js/main.c71813c0.js"
   ]
 }
