@@ -1,12 +1,13 @@
 
 .Header{
     display: flex;
-    background:darkblue;
+    background-image: url(/src/images/red-theater-curtain-background-website-header.jpg);
     height: 150px;
     width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+
 
 }
 
@@ -18,8 +19,10 @@
 
 body {
     color: #222;
-    background:midnightblue;
+   background-image: url("https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-attachment: fixed;
 }
+
 a {
     color: white !important;
     font-family: Arial, sans-serif;
@@ -41,23 +44,20 @@ a {
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    color: #fff;
-    background: #0033cc;
-    box-shadow: 0 2px #21487f;
+
+    background-color: red;
     cursor: pointer;
     user-select: none;
     appearance: none;
     touch-action: manipulation;
     vertical-align: top;
 }
-.btn:hover {
-    background-color: #002fed;
-}
+
 .btn:active {
-    background-color: #2f599e !important;
+    background-color: red !important;
 }
 .btn:focus-visible {
-    box-shadow: 0 0 0 3px lightskyblue;
+    box-shadow: 0 0 0 3px red;
 }
 .btn:disabled {
     background-color: #6c87b5;
@@ -80,8 +80,7 @@ a {
     font-weight: 500;
     text-decoration: none;
     color: #fff;
-    background: #0033cc;
-    box-shadow: 0 2px #21487f;
+    background-color: #b80231;
     cursor: pointer;
     user-select: none;
     appearance: none;
@@ -89,17 +88,18 @@ a {
     vertical-align: top;
 }
 .btn:hover {
-    background-color: #002fed;
+    background-color: palevioletred;
 }
 .btn:active {
-    background-color: #2f599e !important;
+    background-color: darkgrey !important;
 }
 .btn:focus-visible {
     box-shadow: 0 0 0 3px lightskyblue;
 }
 .btn:disabled {
-    background-color: #6c87b5;
+    background-color: transparent;
     pointer-events: none;
+    border: 1px solid black;
 }
 
 .search {
@@ -121,7 +121,7 @@ a {
 }
 
 .searchTerm:focus{
-    color: #00B4CC;
+    color: red;
 }
 
 .searchButton {
@@ -163,8 +163,8 @@ a {
     text-decoration: none;
     color: #fff;
     /*background-color: #3775dd;*/
-    background: #0033cc;
-    box-shadow: 0 2px #21487f;
+    background-color: red;
+
     cursor: pointer;
     user-select: none;
     appearance: none;
@@ -172,7 +172,7 @@ a {
     vertical-align: top;
 }
 .btn1:hover {
-    background-color: #002fed;
+    background-color: palevioletred;
 }
 .btn1:active {
     background-color: #2f599e !important;
@@ -194,17 +194,12 @@ a {
     padding: 0 20px;
     margin: 5px 15px 15px 0;
     outline: none;
-    background:midnightblue;
     border: none;
     height: 25px;
     line-height: 32px;
     font-size: 18px;
     /*font-weight: 500;*/
     text-decoration: none;
-    color: #fff;
-    /*background-color: #3775dd;*/
-    user-select: none;
-    appearance: none;
-    touch-action: manipulation;
-    vertical-align: top;
+    background: transparent;
+
 }

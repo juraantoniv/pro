@@ -8,12 +8,12 @@
     justify-content: center;
     overflow: hidden;
     border-radius: 5px;
-    background:navy;
     padding-bottom: 15px;
     text-decoration: none;
     padding: 5px;
     box-sizing: border-box;
     border: 1px solid blue;
+
 
 }
 
@@ -36,8 +36,9 @@ a{
     overflow: hidden;
     border-radius: 5px;
     text-decoration: none;
+    background-image: url("https://images.unsplash.com/photo-1533509163308-cddb96eda6aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80");
+    background-size: 70%;
     border: none !important;
-    background: darkblue;
    padding-left: 10px;
     color:aqua;
     font-family: "Times New Roman", fantasy
@@ -78,7 +79,6 @@ image{
 .card_of_movie:hover {
     transition: all linear .1s;
     border: 1px solid #59c7fb;
-    background:mediumblue;
 
 }
 .ribbon {
@@ -130,11 +130,10 @@ image{
     gap: 20px;
     width: 100%;
 
-
 }
 
 .cars_list{
-    background: darkblue;
+
     width:1200px;
     /*width: 100%;*/
     display: flex;
@@ -169,7 +168,7 @@ image{
 .page{
     width: 10px;
     height: 10px;
-    background: #0033cc;
+
     margin-left: 20px;
 
 }
@@ -187,7 +186,7 @@ image{
     flex-direction: column;
     color: white;
     padding: 10px;
-    background: #002fed;
+
     border-radius: 15px;
 }
 

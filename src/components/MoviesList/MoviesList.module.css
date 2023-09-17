@@ -1,5 +1,4 @@
 .cars_list{
-    background:darkblue;
     width: 97%;
     display: flex;
     justify-content: center;
@@ -8,6 +7,8 @@
     flex-wrap: wrap;
     gap: 35px;
     border-radius: 10px;
+    background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-attachment: fixed;
 }
 
 
@@ -20,12 +21,11 @@ text{
 .page{
     width: 100px;
     height: 30px;
-    background: #0033cc;
-
     border-radius: 5px;
     justify-content: center;
     display: flex;
     align-items: center;
     margin: 0 5px 5px 37px;
+    color: red;
 
 }
